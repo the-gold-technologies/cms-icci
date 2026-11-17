@@ -2,7 +2,7 @@
 
 import { SITE_PAGES, canonicalFor } from "@/lib/site-pages";
 import React, { useState, useEffect, useRef } from "react";
-import { useParams, useRouter } from "next/navigation";
+import { useParams } from "next/navigation";
 import { PageHeader } from "@/components/PageHeader";
 import { SaveButton } from "@/components/SaveButton";
 import { InputField } from "@/components/InputField";
@@ -13,7 +13,6 @@ import toast from "react-hot-toast";
 
 export default function PageSpecificSEODetail() {
   const params = useParams();
-  const router = useRouter();
   const slugParam = params?.slug;
   const slug = Array.isArray(slugParam) ? slugParam.join("/") : slugParam || "";
 
@@ -62,7 +61,9 @@ export default function PageSpecificSEODetail() {
             ...prev,
             title: slug.charAt(0).toUpperCase() + slug.slice(1),
             slug: slug,
-            canonicalUrl: canonicalFor(SITE_PAGES.find((p) => p.slug === slug)?.route ?? `/${slug}`),
+            canonicalUrl: canonicalFor(
+              SITE_PAGES.find((p) => p.slug === slug)?.route ?? `/${slug}`,
+            ),
           }));
         }
       } catch (error) {

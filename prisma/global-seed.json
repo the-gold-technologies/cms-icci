@@ -109,10 +109,5 @@
       "order": 7
     }
   ],
-  "newsCategories": [
-    "Chamber News",
-    "Government / Regulatory",
-    "Articles & Insights",
-    "Events"
-  ]
+  "newsCategories": ["Chamber News", "Government / Regulatory", "Articles & Insights", "Events"]
 }

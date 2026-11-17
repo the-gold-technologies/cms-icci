@@ -10,7 +10,8 @@ export async function GET(_req: Request, { params }: Params) {
   try {
     const { id } = await params;
     const event = await prisma.event.findUnique({ where: { id } });
-    if (!event) return NextResponse.json({ success: false, error: "Event not found" }, { status: 404 });
+    if (!event)
+      return NextResponse.json({ success: false, error: "Event not found" }, { status: 404 });
     return NextResponse.json({ success: true, data: event });
   } catch {
     return NextResponse.json({ success: false, error: "Failed to fetch event" }, { status: 500 });
@@ -25,7 +26,8 @@ export async function PUT(req: Request, { params }: Params) {
     const { id } = await params;
     const body = await req.json();
     const existing = await prisma.event.findUnique({ where: { id } });
-    if (!existing) return NextResponse.json({ success: false, error: "Event not found" }, { status: 404 });
+    if (!existing)
+      return NextResponse.json({ success: false, error: "Event not found" }, { status: 404 });
 
     const updated = await prisma.event.update({
       where: { id },

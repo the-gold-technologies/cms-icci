@@ -23,7 +23,15 @@ const normalize = (d: any = {}) => ({
 });
 
 export function MembershipEnquirySection({ initialData }: { initialData?: any }) {
-  const { isOpen, setIsOpen, content: c, set, loading, saved, handleSave } = useSectionEditor({
+  const {
+    isOpen,
+    setIsOpen,
+    content: c,
+    set,
+    loading,
+    saved,
+    handleSave,
+  } = useSectionEditor({
     slug: "membership",
     section: "MembershipEnquirySection",
     label: "Membership enquiry",

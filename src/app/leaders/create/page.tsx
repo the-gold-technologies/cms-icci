@@ -13,7 +13,10 @@ export default function CreateLeaderPage() {
         <ArrowLeft className="w-4 h-4" />
         <span>Back to Leadership</span>
       </Link>
-      <PageHeader title="Add New Leader" description="Add an office bearer or National Executive Committee member." />
+      <PageHeader
+        title="Add New Leader"
+        description="Add an office bearer or National Executive Committee member."
+      />
       <LeaderForm />
     </div>
   );

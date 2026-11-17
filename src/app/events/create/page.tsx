@@ -13,7 +13,10 @@ export default function CreateEventPage() {
         <ArrowLeft className="w-4 h-4" />
         <span>Back to Events</span>
       </Link>
-      <PageHeader title="Add New Event" description="Add a conference, meeting or workshop to /events." />
+      <PageHeader
+        title="Add New Event"
+        description="Add a conference, meeting or workshop to /events."
+      />
       <EventForm />
     </div>
   );

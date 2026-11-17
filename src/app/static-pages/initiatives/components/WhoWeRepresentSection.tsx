@@ -13,7 +13,12 @@ export function WhoWeRepresentSection({ initialData }: { initialData?: any }) {
       label="Who We Represent"
       initialData={initialData}
       fields={[
-        { key: "intro", label: "Intro Paragraph", placeholder: "e.g. Sentence under the heading", multiline: true },
+        {
+          key: "intro",
+          label: "Intro Paragraph",
+          placeholder: "e.g. Sentence under the heading",
+          multiline: true,
+        },
         { key: "ctaLabel", label: "Button Label", placeholder: "e.g. Membership call to action" },
         { key: "ctaLink", label: "Button Link", placeholder: "e.g. /membership" },
       ]}

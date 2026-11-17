@@ -13,7 +13,12 @@ export function KeyInitiativesSection({ initialData }: { initialData?: any }) {
       label="Key Initiatives"
       initialData={initialData}
       fields={[
-        { key: "intro", label: "Intro Paragraph", placeholder: "e.g. Sentence under the heading", multiline: true },
+        {
+          key: "intro",
+          label: "Intro Paragraph",
+          placeholder: "e.g. Sentence under the heading",
+          multiline: true,
+        },
       ]}
       listKey="items"
       listTitle="Initiative Cards"
@@ -22,7 +27,12 @@ export function KeyInitiativesSection({ initialData }: { initialData?: any }) {
       itemFields={[
         { key: "title", label: "Title", placeholder: "e.g. Initiative name" },
         { key: "tag", label: "Number Tag", placeholder: "e.g. 05" },
-        { key: "text", label: "Text", placeholder: "e.g. What the initiative does", multiline: true },
+        {
+          key: "text",
+          label: "Text",
+          placeholder: "e.g. What the initiative does",
+          multiline: true,
+        },
       ]}
     />
   );

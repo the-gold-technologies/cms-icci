@@ -14,11 +14,24 @@ export function ContactDetailsSection({ initialData }: { initialData?: any }) {
       label="Contact Details"
       initialData={initialData}
       extra={[
-        { key: "addressLabel", label: "Address Label", placeholder: "e.g. Label above the address" },
+        {
+          key: "addressLabel",
+          label: "Address Label",
+          placeholder: "e.g. Label above the address",
+        },
         { key: "phoneLabel", label: "Phone Label", placeholder: "e.g. Label above the phone" },
         { key: "emailLabel", label: "Email Label", placeholder: "e.g. Label above the email" },
-        { key: "mapTitle", label: "Map Title (accessibility)", placeholder: "e.g. Describes the map" },
-        { key: "mapEmbedUrl", label: "Google Maps Embed URL", placeholder: "e.g. https://maps.google.com/maps?q=...&output=embed", multiline: true },
+        {
+          key: "mapTitle",
+          label: "Map Title (accessibility)",
+          placeholder: "e.g. Describes the map",
+        },
+        {
+          key: "mapEmbedUrl",
+          label: "Google Maps Embed URL",
+          placeholder: "e.g. https://maps.google.com/maps?q=...&output=embed",
+          multiline: true,
+        },
       ]}
       managed={[
         {

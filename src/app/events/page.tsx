@@ -83,10 +83,16 @@ export default function EventsPage() {
                         <MapPin className="w-3.5 h-3.5 text-gray-400 flex-shrink-0 mt-0.5" />
                         <span>{e.location}</span>
                       </p>
-                      {e.text && <p className="text-xs text-gray-500 mt-3 line-clamp-3 leading-relaxed">{e.text}</p>}
+                      {e.text && (
+                        <p className="text-xs text-gray-500 mt-3 line-clamp-3 leading-relaxed">
+                          {e.text}
+                        </p>
+                      )}
                     </div>
                     <div className="px-6 py-4 border-t border-gray-100 flex items-center justify-between bg-gray-50/50">
-                      <span className="text-[11px] text-gray-400 font-medium">{e.isPast ? "Past" : "Upcoming"}</span>
+                      <span className="text-[11px] text-gray-400 font-medium">
+                        {e.isPast ? "Past" : "Upcoming"}
+                      </span>
                       <div className="flex items-center gap-1">
                         <button
                           type="button"

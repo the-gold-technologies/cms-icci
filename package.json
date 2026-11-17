@@ -8,14 +8,9 @@
     "start": "next start -p 3001",
     "lint": "eslint",
     "postinstall": "prisma generate",
-    "seed:build": "node scripts/build-seed-from-website.js",
-    "assets:upload": "node scripts/upload-website-assets.js",
     "seed": "node prisma/seed.js",
-    "verify": "node scripts/verify-parity.js",
     "format": "prettier --write .",
-    "format:check": "prettier --check .",
-    "audit": "node scripts/audit-content.js",
-    "assets:apply": "node scripts/apply-uploaded-assets.js"
+    "format:check": "prettier --check ."
   },
   "prisma": {
     "seed": "node prisma/seed.js"

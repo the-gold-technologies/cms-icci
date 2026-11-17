@@ -97,7 +97,9 @@ export default function LeadersPage() {
                       </div>
                       <div className="p-6">
                         <h3 className="text-base font-bold text-gray-900 leading-snug">{l.name}</h3>
-                        {l.org && <p className="text-xs text-gray-500 mt-2 line-clamp-2">{l.org}</p>}
+                        {l.org && (
+                          <p className="text-xs text-gray-500 mt-2 line-clamp-2">{l.org}</p>
+                        )}
                         <p className="text-[11px] text-[#d4561b] font-semibold mt-3">#{l.slug}</p>
                       </div>
                     </div>

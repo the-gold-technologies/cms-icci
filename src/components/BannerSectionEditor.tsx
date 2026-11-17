@@ -59,7 +59,12 @@ export function BannerSectionEditor({
       loading={loading}
       saved={saved}
     >
-      <HeadingFields value={c} onChange={(k, v) => set(k, v)} accent headlineLabel="Primary Heading (H1)" />
+      <HeadingFields
+        value={c}
+        onChange={(k, v) => set(k, v)}
+        accent
+        headlineLabel="Primary Heading (H1)"
+      />
       <ImagePickerField
         label="Banner Background Photo"
         value={c.image}

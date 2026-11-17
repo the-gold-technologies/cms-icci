@@ -29,7 +29,10 @@ export async function POST(req: Request) {
     const tier = body.tier === "executive" ? "executive" : "office-bearer";
     const slug = slugify(text(body.slug) || name);
     if (!name || !role || !slug) {
-      return NextResponse.json({ success: false, error: "Name and role are required" }, { status: 400 });
+      return NextResponse.json(
+        { success: false, error: "Name and role are required" },
+        { status: 400 },
+      );
     }
     if (await prisma.leader.findUnique({ where: { slug } })) {
       return NextResponse.json(

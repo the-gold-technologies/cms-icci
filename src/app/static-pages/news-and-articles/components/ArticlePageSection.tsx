@@ -15,7 +15,11 @@ export function ArticlePageSection({ initialData }: { initialData?: any }) {
       extra={[
         { key: "backLabel", label: "Back Link Label", placeholder: "e.g. Link back to all news" },
         { key: "backLink", label: "Back Link URL", placeholder: "e.g. /news" },
-        { key: "moreTitle", label: "'More News' Heading", placeholder: "e.g. Heading above three more stories" },
+        {
+          key: "moreTitle",
+          label: "'More News' Heading",
+          placeholder: "e.g. Heading above three more stories",
+        },
       ]}
     />
   );

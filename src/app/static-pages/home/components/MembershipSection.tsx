@@ -16,7 +16,11 @@ export function MembershipSection({ initialData }: { initialData?: any }) {
       intro
       link
       extra={[
-        { key: "benefitsHeading", label: "Benefits Heading", placeholder: "e.g. Heading above the tick list" },
+        {
+          key: "benefitsHeading",
+          label: "Benefits Heading",
+          placeholder: "e.g. Heading above the tick list",
+        },
       ]}
       managed={[
         {

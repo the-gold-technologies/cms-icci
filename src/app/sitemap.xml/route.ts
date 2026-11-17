@@ -3,7 +3,8 @@ import { SITE_PAGES, SITE_URL } from "@/lib/site-pages";
 
 export const dynamic = "force-dynamic";
 
-const xmlEscape = (v: string) => v.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+const xmlEscape = (v: string) =>
+  v.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
 /** Every published ICCI page plus every news article (/news/<slug>), lastmod from updatedAt. */
 export async function GET() {
@@ -20,7 +21,10 @@ export async function GET() {
 
   const [pages, articles] = await Promise.all([
     prisma.page.findMany({ where: { visibility: "published" } }),
-    prisma.newsItem.findMany({ select: { slug: true, updatedAt: true }, orderBy: { order: "asc" } }),
+    prisma.newsItem.findMany({
+      select: { slug: true, updatedAt: true },
+      orderBy: { order: "asc" },
+    }),
   ]);
   const bySlug = new Map(pages.map((p) => [p.slug, p]));
 
@@ -31,7 +35,10 @@ export async function GET() {
     urls.push({
       loc: page?.canonicalUrl || `${SITE_URL}${sp.route === "/" ? "/" : sp.route}`,
       lastmod: (page?.updatedAt ?? new Date()).toISOString(),
-      changefreq: sp.slug === "home" || sp.slug === "news-and-articles" || sp.slug === "events" ? "weekly" : "monthly",
+      changefreq:
+        sp.slug === "home" || sp.slug === "news-and-articles" || sp.slug === "events"
+          ? "weekly"
+          : "monthly",
       priority: sp.slug === "home" ? "1.0" : sp.slug === "membership" ? "0.9" : "0.8",
     });
   }

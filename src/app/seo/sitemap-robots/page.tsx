@@ -219,8 +219,7 @@ export default function SitemapRobotsPage() {
           <div>
             <h3 className="text-sm font-bold text-gray-900">Generate sitemap.xml</h3>
             <p className="text-xs text-gray-500 mt-0.5">
-              Automatically compiles all website pages and news articles into an XML
-              sitemap.
+              Automatically compiles all website pages and news articles into an XML sitemap.
             </p>
           </div>
 

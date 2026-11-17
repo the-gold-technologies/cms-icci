@@ -3,16 +3,7 @@
 import { useState, useEffect } from "react";
 import { PageHeader } from "@/components/PageHeader";
 import { DeleteConfirmModal } from "@/components/DeleteConfirmModal";
-import {
-  Search,
-  Mail,
-  Phone,
-  MapPin,
-  Calendar,
-  Trash2,
-  X,
-  Building,
-} from "lucide-react";
+import { Search, Trash2, X } from "lucide-react";
 import { formatDate } from "@/lib/utils";
 import toast from "react-hot-toast";
 
@@ -31,7 +22,6 @@ export function SubmissionsTable({ formType, title, description }: SubmissionsTa
   const [activeItem, setActiveItem] = useState<any | null>(null);
   const [deleteId, setDeleteId] = useState<string | null>(null);
   const [deleting, setDeleting] = useState(false);
-  const [updatingStatus, setUpdatingStatus] = useState(false);
 
   const fetchSubmissions = async () => {
     try {
@@ -54,7 +44,6 @@ export function SubmissionsTable({ formType, title, description }: SubmissionsTa
   }, [formType, statusFilter]);
 
   const handleUpdateStatus = async (id: string, newStatus: string) => {
-    setUpdatingStatus(true);
     try {
       const res = await fetch(`/api/submissions/${id}`, {
         method: "PUT",
@@ -71,8 +60,6 @@ export function SubmissionsTable({ formType, title, description }: SubmissionsTa
       }
     } catch {
       toast.error("Failed to update status");
-    } finally {
-      setUpdatingStatus(false);
     }
   };
 
@@ -286,7 +273,9 @@ export function SubmissionsTable({ formType, title, description }: SubmissionsTa
               {activeItem.membershipCategory && (
                 <div>
                   <span className="text-gray-400 block">Membership Category</span>
-                  <span className="font-semibold text-gray-800">{activeItem.membershipCategory}</span>
+                  <span className="font-semibold text-gray-800">
+                    {activeItem.membershipCategory}
+                  </span>
                 </div>
               )}
               {activeItem.state && (

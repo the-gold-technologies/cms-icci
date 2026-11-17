@@ -46,10 +46,7 @@
           "imageAlt": "Every project, a better India"
         }
       ],
-      "trustPoints": [
-        "30+ members from 7 states",
-        "One unified industry voice"
-      ],
+      "trustPoints": ["30+ members from 7 states", "One unified industry voice"],
       "membersValue": "30+",
       "membersLabel": "Members from 7 states",
       "membersCtaLabel": "Join them",

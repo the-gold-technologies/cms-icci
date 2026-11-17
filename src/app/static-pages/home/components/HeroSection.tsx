@@ -78,7 +78,12 @@ export function HeroSection({ initialData }: { initialData?: any }) {
       loading={loading}
       saved={saved}
     >
-      <HeadingFields value={c} onChange={(k, v) => set(k, v)} accent headlineLabel="Primary Heading (H1)" />
+      <HeadingFields
+        value={c}
+        onChange={(k, v) => set(k, v)}
+        accent
+        headlineLabel="Primary Heading (H1)"
+      />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <InputField

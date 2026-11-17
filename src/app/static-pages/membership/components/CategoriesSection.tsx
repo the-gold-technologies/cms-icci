@@ -21,8 +21,16 @@ export function CategoriesSection({ initialData }: { initialData?: any }) {
         { key: "text", label: "Text", placeholder: "e.g. One or two sentences", multiline: true },
       ]}
       fieldsAfterList={[
-        { key: "fallbackTitle", label: "Last Card Title", placeholder: "e.g. Prompt for unsure visitors" },
-        { key: "fallbackCtaLabel", label: "Last Card Link Label", placeholder: "e.g. Enquiry link text" },
+        {
+          key: "fallbackTitle",
+          label: "Last Card Title",
+          placeholder: "e.g. Prompt for unsure visitors",
+        },
+        {
+          key: "fallbackCtaLabel",
+          label: "Last Card Link Label",
+          placeholder: "e.g. Enquiry link text",
+        },
         { key: "fallbackCtaLink", label: "Last Card Link URL", placeholder: "e.g. #join" },
       ]}
     />

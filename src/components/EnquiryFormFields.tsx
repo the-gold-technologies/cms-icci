@@ -71,8 +71,8 @@ export function EnquiryFormFields({
             Form Fields ({value.fields.length})
           </h4>
           <p className="text-[11px] text-gray-400 mt-0.5">
-            The fields themselves are fixed (they map to the Submissions inbox); edit their label and
-            placeholder.
+            The fields themselves are fixed (they map to the Submissions inbox); edit their label
+            and placeholder.
           </p>
         </div>
         {value.fields.map((f, i) => (

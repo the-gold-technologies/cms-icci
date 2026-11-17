@@ -102,7 +102,9 @@ export function OverviewStats({ stats, loading = false }: OverviewStatsProps) {
                   <p className="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-1">
                     {m.label}
                   </p>
-                  <p className={`text-[13px] font-bold ${m.green ? "text-[#12b76a]" : "text-[#0B0F29]"}`}>
+                  <p
+                    className={`text-[13px] font-bold ${m.green ? "text-[#12b76a]" : "text-[#0B0F29]"}`}
+                  >
                     {m.value}
                   </p>
                 </div>

@@ -80,7 +80,7 @@ export async function deleteCloudinaryAsset(url: string | null | undefined): Pro
     if (!match) return false;
 
     const resourceType = match[1] as "image" | "raw" | "video";
-    let publicId = match[2];
+    const publicId = match[2];
 
     const result = await cloudinary.uploader.destroy(publicId, {
       resource_type: resourceType,

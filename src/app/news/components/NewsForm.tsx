@@ -112,14 +112,20 @@ export function NewsForm({ initialData, isEdit = false }: NewsFormProps) {
           <label className="text-xs font-semibold text-gray-600 mb-1.5 uppercase tracking-wide ml-1">
             Category
           </label>
-          <select value={category} onChange={(e) => setCategory(e.target.value)} className={selectClass}>
+          <select
+            value={category}
+            onChange={(e) => setCategory(e.target.value)}
+            className={selectClass}
+          >
             <option value="">Select...</option>
             {categories.map((c) => (
               <option key={c} value={c}>
                 {c}
               </option>
             ))}
-            {category && !categories.includes(category) && <option value={category}>{category}</option>}
+            {category && !categories.includes(category) && (
+              <option value={category}>{category}</option>
+            )}
           </select>
         </div>
         <InputField

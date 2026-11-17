@@ -9,15 +9,21 @@ export async function GET() {
     const authCheck = await checkAdminSession();
     if (!authCheck.authorized) return authCheck.response;
 
-    const [leadersCount, newsCount, eventsCount, submissionsCount, newSubmissionsCount, recentSubmissions] =
-      await Promise.all([
-        prisma.leader.count().catch(() => 0),
-        prisma.newsItem.count().catch(() => 0),
-        prisma.event.count().catch(() => 0),
-        prisma.submission.count().catch(() => 0),
-        prisma.submission.count({ where: { status: "New" } }).catch(() => 0),
-        prisma.submission.findMany({ take: 6, orderBy: { createdAt: "desc" } }).catch(() => []),
-      ]);
+    const [
+      leadersCount,
+      newsCount,
+      eventsCount,
+      submissionsCount,
+      newSubmissionsCount,
+      recentSubmissions,
+    ] = await Promise.all([
+      prisma.leader.count().catch(() => 0),
+      prisma.newsItem.count().catch(() => 0),
+      prisma.event.count().catch(() => 0),
+      prisma.submission.count().catch(() => 0),
+      prisma.submission.count({ where: { status: "New" } }).catch(() => 0),
+      prisma.submission.findMany({ take: 6, orderBy: { createdAt: "desc" } }).catch(() => []),
+    ]);
 
     return NextResponse.json({
       success: true,

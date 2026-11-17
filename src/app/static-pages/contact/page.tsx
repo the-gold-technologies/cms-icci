@@ -3,11 +3,7 @@
 import React from "react";
 import { PageHeader } from "@/components/PageHeader";
 import { usePageData } from "@/lib/useSectionEditor";
-import {
-  ContactHeroSection,
-  ContactDetailsSection,
-  ContactFormSection,
-} from "./components";
+import { ContactHeroSection, ContactDetailsSection, ContactFormSection } from "./components";
 
 export default function ContactPageEditor() {
   const pageData = usePageData("contact");

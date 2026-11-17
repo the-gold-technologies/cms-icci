@@ -15,7 +15,11 @@ export function NewsSection({ initialData }: { initialData?: any }) {
       initialData={initialData}
       link
       extra={[
-        { key: "readMoreLabel", label: "Featured Story Link Label", placeholder: "e.g. Text on the featured card" },
+        {
+          key: "readMoreLabel",
+          label: "Featured Story Link Label",
+          placeholder: "e.g. Text on the featured card",
+        },
       ]}
       managed={[
         {

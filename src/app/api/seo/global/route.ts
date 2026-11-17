@@ -10,7 +10,7 @@ export async function GET() {
       where: { id: "global" },
     });
     return NextResponse.json({ success: true, data: config });
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { success: false, error: "Failed to fetch SEO config" },
       { status: 500 },

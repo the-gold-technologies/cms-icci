@@ -63,7 +63,7 @@ async function deletePreviousAsset(urlOrPublicId: string) {
         if (localPath.startsWith(uploadsDir)) {
           await fs.unlink(localPath);
         }
-      } catch (e) {
+      } catch {
         // ignore if already deleted
       }
     }

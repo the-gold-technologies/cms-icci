@@ -27,14 +27,29 @@ export function AdminRightSidebar({ stats, loading }: AdminRightSidebarProps) {
 
   useEffect(() => {
     Promise.all([
-      fetch("/api/news").then((r) => r.json()).catch(() => null),
-      fetch("/api/leaders").then((r) => r.json()).catch(() => null),
-      fetch("/api/events").then((r) => r.json()).catch(() => null),
+      fetch("/api/news")
+        .then((r) => r.json())
+        .catch(() => null),
+      fetch("/api/leaders")
+        .then((r) => r.json())
+        .catch(() => null),
+      fetch("/api/events")
+        .then((r) => r.json())
+        .catch(() => null),
     ]).then(([news, leaders, events]) => {
       const items = [
-        ...(news?.data || []).map((n: any) => ({ text: `Article updated: ${n.title}`, at: n.updatedAt })),
-        ...(leaders?.data || []).map((l: any) => ({ text: `Leader profile updated: ${l.name}`, at: l.updatedAt })),
-        ...(events?.data || []).map((e: any) => ({ text: `Event updated: ${e.title}`, at: e.updatedAt })),
+        ...(news?.data || []).map((n: any) => ({
+          text: `Article updated: ${n.title}`,
+          at: n.updatedAt,
+        })),
+        ...(leaders?.data || []).map((l: any) => ({
+          text: `Leader profile updated: ${l.name}`,
+          at: l.updatedAt,
+        })),
+        ...(events?.data || []).map((e: any) => ({
+          text: `Event updated: ${e.title}`,
+          at: e.updatedAt,
+        })),
       ]
         .sort((a, b) => new Date(b.at).getTime() - new Date(a.at).getTime())
         .slice(0, 4)

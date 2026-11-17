@@ -18,7 +18,15 @@ const normalize = (d: any = {}) => ({
 type Content = ReturnType<typeof normalize>;
 
 export function MissionVisionSection({ initialData }: { initialData?: any }) {
-  const { isOpen, setIsOpen, content: c, set, loading, saved, handleSave } = useSectionEditor({
+  const {
+    isOpen,
+    setIsOpen,
+    content: c,
+    set,
+    loading,
+    saved,
+    handleSave,
+  } = useSectionEditor({
     slug: "about",
     section: "MissionVisionSection",
     label: "Mission & Vision",
@@ -67,7 +75,9 @@ export function MissionVisionSection({ initialData }: { initialData?: any }) {
       saved={saved}
     >
       {block("mission", "Mission Card")}
-      <div className="border-t border-gray-100 pt-5">{block("vision", "Vision Card (saffron)")}</div>
+      <div className="border-t border-gray-100 pt-5">
+        {block("vision", "Vision Card (saffron)")}
+      </div>
     </SectionShell>
   );
 }

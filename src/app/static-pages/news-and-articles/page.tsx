@@ -3,11 +3,7 @@
 import React from "react";
 import { PageHeader } from "@/components/PageHeader";
 import { usePageData } from "@/lib/useSectionEditor";
-import {
-  NewsHeroSection,
-  NewsBrowserSection,
-  ArticlePageSection,
-} from "./components";
+import { NewsHeroSection, NewsBrowserSection, ArticlePageSection } from "./components";
 
 export default function NewsPageEditor() {
   const pageData = usePageData("news-and-articles");

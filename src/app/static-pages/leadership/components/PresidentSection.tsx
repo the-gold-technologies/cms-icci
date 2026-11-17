@@ -23,7 +23,11 @@ export function PresidentSection({ initialData }: { initialData?: any }) {
         },
       ]}
       extra={[
-        { key: "readProfileLabel", label: "'Read Profile' Button Label", placeholder: "e.g. Opens the full bio (used on every card)" },
+        {
+          key: "readProfileLabel",
+          label: "'Read Profile' Button Label",
+          placeholder: "e.g. Opens the full bio (used on every card)",
+        },
       ]}
     />
   );

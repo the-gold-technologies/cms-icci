@@ -14,7 +14,13 @@ const selectClass =
   "w-full text-xs font-medium text-gray-800 bg-white border border-gray-200 rounded-xl px-3 py-2.5 focus:border-[#ee6a2c] focus:ring-1 focus:ring-[#ee6a2c] outline-none";
 const selectLabel = "text-xs font-semibold text-gray-600 mb-1.5 uppercase tracking-wide ml-1";
 
-export function LeaderForm({ initialData, isEdit = false }: { initialData?: any; isEdit?: boolean }) {
+export function LeaderForm({
+  initialData,
+  isEdit = false,
+}: {
+  initialData?: any;
+  isEdit?: boolean;
+}) {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [saved, setSaved] = useState(false);
@@ -194,7 +200,12 @@ export function LeaderForm({ initialData, isEdit = false }: { initialData?: any;
       </div>
 
       <div className="pt-4 border-t border-gray-100 w-full">
-        <SaveButton type="submit" loading={loading} saved={saved} label={isEdit ? "Update Leader" : "Add Leader"} />
+        <SaveButton
+          type="submit"
+          loading={loading}
+          saved={saved}
+          label={isEdit ? "Update Leader" : "Add Leader"}
+        />
       </div>
     </form>
   );

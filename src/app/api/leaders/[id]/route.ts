@@ -12,7 +12,8 @@ export async function GET(_req: Request, { params }: Params) {
   try {
     const { id } = await params;
     const leader = await prisma.leader.findUnique({ where: { id } });
-    if (!leader) return NextResponse.json({ success: false, error: "Leader not found" }, { status: 404 });
+    if (!leader)
+      return NextResponse.json({ success: false, error: "Leader not found" }, { status: 404 });
     return NextResponse.json({ success: true, data: leader });
   } catch {
     return NextResponse.json({ success: false, error: "Failed to fetch leader" }, { status: 500 });
@@ -27,10 +28,15 @@ export async function PUT(req: Request, { params }: Params) {
     const { id } = await params;
     const body = await req.json();
     const existing = await prisma.leader.findUnique({ where: { id } });
-    if (!existing) return NextResponse.json({ success: false, error: "Leader not found" }, { status: 404 });
+    if (!existing)
+      return NextResponse.json({ success: false, error: "Leader not found" }, { status: 404 });
 
     const slug = body.slug !== undefined ? slugify(text(body.slug)) : existing.slug;
-    if (!slug) return NextResponse.json({ success: false, error: "Anchor slug is required" }, { status: 400 });
+    if (!slug)
+      return NextResponse.json(
+        { success: false, error: "Anchor slug is required" },
+        { status: 400 },
+      );
     if (slug !== existing.slug && (await prisma.leader.findUnique({ where: { slug } }))) {
       return NextResponse.json(
         { success: false, error: `Another leader already uses the anchor #${slug}` },
@@ -61,7 +67,8 @@ export async function PUT(req: Request, { params }: Params) {
       },
     });
 
-    if (existing.photo && existing.photo !== photo) deleteCloudinaryAsset(existing.photo).catch(console.error);
+    if (existing.photo && existing.photo !== photo)
+      deleteCloudinaryAsset(existing.photo).catch(console.error);
     revalidateWebsite(WebsiteTag.leaders, ...PAGES_SHOWING_LEADERS);
     return NextResponse.json({ success: true, data: updated });
   } catch (error: any) {
@@ -80,7 +87,8 @@ export async function DELETE(_req: Request, { params }: Params) {
 
     const { id } = await params;
     const existing = await prisma.leader.findUnique({ where: { id } });
-    if (!existing) return NextResponse.json({ success: false, error: "Leader not found" }, { status: 404 });
+    if (!existing)
+      return NextResponse.json({ success: false, error: "Leader not found" }, { status: 404 });
     await prisma.leader.delete({ where: { id } });
     if (existing.photo) deleteCloudinaryAsset(existing.photo).catch(console.error);
 

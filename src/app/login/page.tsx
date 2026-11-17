@@ -70,7 +70,9 @@ export default function LoginPage() {
               </span>
             )}
           </div>
-          <h1 className="text-2xl font-bold text-gray-900 tracking-tight">Indian Chamber of Construction Industry</h1>
+          <h1 className="text-2xl font-bold text-gray-900 tracking-tight">
+            Indian Chamber of Construction Industry
+          </h1>
           <p className="text-gray-500 text-xs mt-1">Sign in to the ICCI website CMS</p>
         </div>
 
@@ -106,7 +108,8 @@ export default function LoginPage() {
 
         <div className="mt-8 text-center border-t border-gray-100 pt-4">
           <p className="text-gray-400 text-xs">
-            &copy; {new Date().getFullYear()} Indian Chamber of Construction Industry. All rights reserved.
+            &copy; {new Date().getFullYear()} Indian Chamber of Construction Industry. All rights
+            reserved.
           </p>
         </div>
       </div>

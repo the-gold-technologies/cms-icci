@@ -4,7 +4,10 @@ import { useCallback, useEffect, useState } from "react";
 import toast from "react-hot-toast";
 
 /** List state for a collection module: load, delete (with confirm modal) and move up/down. */
-export function useCollection<T extends { id: string; order: number }>(endpoint: string, noun: string) {
+export function useCollection<T extends { id: string; order: number }>(
+  endpoint: string,
+  noun: string,
+) {
   const [items, setItems] = useState<T[]>([]);
   const [loading, setLoading] = useState(true);
   const [deleteId, setDeleteId] = useState<string | null>(null);
@@ -68,7 +71,9 @@ export function useCollection<T extends { id: string; order: number }>(endpoint:
       if (results.every((r) => r.success)) {
         setItems((prev) =>
           prev
-            .map((i) => (i.id === a.id ? { ...i, order: orderA } : i.id === b.id ? { ...i, order: orderB } : i))
+            .map((i) =>
+              i.id === a.id ? { ...i, order: orderA } : i.id === b.id ? { ...i, order: orderB } : i,
+            )
             .sort((x, y) => x.order - y.order),
         );
         toast.success("Order updated");

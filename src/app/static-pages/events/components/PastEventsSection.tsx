@@ -14,8 +14,17 @@ export function PastEventsSection({ initialData }: { initialData?: any }) {
       label="Past Events"
       initialData={initialData}
       extra={[
-        { key: "emptyText", label: "Empty State Message", placeholder: "e.g. Shown while there are no events", multiline: true },
-        { key: "emptyCtaLabel", label: "Empty State Link Label", placeholder: "e.g. Contact link text" },
+        {
+          key: "emptyText",
+          label: "Empty State Message",
+          placeholder: "e.g. Shown while there are no events",
+          multiline: true,
+        },
+        {
+          key: "emptyCtaLabel",
+          label: "Empty State Link Label",
+          placeholder: "e.g. Contact link text",
+        },
         { key: "emptyCtaLink", label: "Empty State Link URL", placeholder: "e.g. /contact" },
       ]}
       managed={[

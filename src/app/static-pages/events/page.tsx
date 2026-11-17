@@ -3,11 +3,7 @@
 import React from "react";
 import { PageHeader } from "@/components/PageHeader";
 import { usePageData } from "@/lib/useSectionEditor";
-import {
-  EventsHeroSection,
-  UpcomingEventsSection,
-  PastEventsSection,
-} from "./components";
+import { EventsHeroSection, UpcomingEventsSection, PastEventsSection } from "./components";
 
 export default function EventsPageEditor() {
   const pageData = usePageData("events");

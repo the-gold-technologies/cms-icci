@@ -5,7 +5,7 @@ export const dynamic = "force-dynamic";
 
 export async function GET() {
   const config = await prisma.globalConfig.findFirst({ where: { id: "global" } });
-  let body = (
+  const body = (
     config?.robotsTxt ||
     `User-agent: *
 Allow: /

@@ -5,7 +5,7 @@ import { useSession } from "next-auth/react";
 import toast from "react-hot-toast";
 import { PageHeader } from "@/components/PageHeader";
 import { SaveButton } from "@/components/SaveButton";
-import { User, Lock, Eye, EyeOff, ShieldCheck } from "lucide-react";
+import { User, Lock, Eye, EyeOff } from "lucide-react";
 
 export default function ProfileSettingsPage() {
   const { data: session, update } = useSession();
@@ -35,7 +35,7 @@ export default function ProfileSettingsPage() {
           setName(session.user.name || "");
           setEmail(session.user.email || "");
         }
-      } catch (err) {
+      } catch {
         if (session?.user) {
           setName(session.user.name || "");
           setEmail(session.user.email || "");

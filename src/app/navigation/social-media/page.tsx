@@ -19,11 +19,41 @@ import { SaveButton } from "@/components/SaveButton";
 
 /** Networks the website has an icon for (icci/components/Social.tsx), in display order. */
 const NETWORKS = [
-  { key: "facebook", label: "Facebook", field: "facebookUrl", title: "Facebook Page URL", ph: "https://www.facebook.com/profile.php?id=..." },
-  { key: "instagram", label: "Instagram", field: "instagramUrl", title: "Instagram Profile URL", ph: "https://www.instagram.com/..." },
-  { key: "linkedin", label: "LinkedIn", field: "linkedinUrl", title: "LinkedIn Company URL", ph: "https://www.linkedin.com/company/..." },
-  { key: "x", label: "X (Twitter)", field: "xUrl", title: "X (Twitter) Profile URL", ph: "https://x.com/..." },
-  { key: "youtube", label: "YouTube", field: "youtubeUrl", title: "YouTube Channel URL", ph: "https://youtube.com/@..." },
+  {
+    key: "facebook",
+    label: "Facebook",
+    field: "facebookUrl",
+    title: "Facebook Page URL",
+    ph: "https://www.facebook.com/profile.php?id=...",
+  },
+  {
+    key: "instagram",
+    label: "Instagram",
+    field: "instagramUrl",
+    title: "Instagram Profile URL",
+    ph: "https://www.instagram.com/...",
+  },
+  {
+    key: "linkedin",
+    label: "LinkedIn",
+    field: "linkedinUrl",
+    title: "LinkedIn Company URL",
+    ph: "https://www.linkedin.com/company/...",
+  },
+  {
+    key: "x",
+    label: "X (Twitter)",
+    field: "xUrl",
+    title: "X (Twitter) Profile URL",
+    ph: "https://x.com/...",
+  },
+  {
+    key: "youtube",
+    label: "YouTube",
+    field: "youtubeUrl",
+    title: "YouTube Channel URL",
+    ph: "https://youtube.com/@...",
+  },
 ] as const;
 type NetworkKey = (typeof NETWORKS)[number]["key"];
 
@@ -83,12 +113,16 @@ export default function SocialMediaFooterPage() {
           const list: any[] = Array.isArray(cfg.socialLinks) ? cfg.socialLinks : [];
           setUrls(
             Object.fromEntries(
-              NETWORKS.map((n) => [n.key, s(list.find((l) => l?.key === n.key)?.href) || s(cfg[n.field])]),
+              NETWORKS.map((n) => [
+                n.key,
+                s(list.find((l) => l?.key === n.key)?.href) || s(cfg[n.field]),
+              ]),
             ) as Record<NetworkKey, string>,
           );
           setLabels(Object.fromEntries(list.map((l) => [s(l?.key), s(l?.label)])));
 
-          const f = cfg.footerContent && typeof cfg.footerContent === "object" ? cfg.footerContent : {};
+          const f =
+            cfg.footerContent && typeof cfg.footerContent === "object" ? cfg.footerContent : {};
           setFooter(Object.fromEntries(FOOTER_KEYS.map((k) => [k, s(f[k])])) as FooterContent);
         }
       } catch (err) {
@@ -173,7 +207,9 @@ export default function SocialMediaFooterPage() {
       {loading ? (
         <div className="bg-white rounded-3xl p-16 text-center border border-gray-100 flex flex-col items-center justify-center gap-3">
           <Loader2 className="w-8 h-8 text-[#ee6a2c] animate-spin" />
-          <p className="text-xs font-semibold text-gray-500">Loading brand &amp; footer settings...</p>
+          <p className="text-xs font-semibold text-gray-500">
+            Loading brand &amp; footer settings...
+          </p>
         </div>
       ) : (
         <form onSubmit={handleSave} className="flex flex-col gap-8 w-full">
@@ -363,7 +399,8 @@ export default function SocialMediaFooterPage() {
                   3. Centralized Social Media Profiles
                 </h3>
                 <p className="text-xs text-gray-500">
-                  Single source of truth for all social channels displayed across the entire website.
+                  Single source of truth for all social channels displayed across the entire
+                  website.
                 </p>
               </div>
             </div>

@@ -22,7 +22,11 @@ export function RosterSection({ initialData }: { initialData?: any }) {
         { key: "role", label: "Leader Role", placeholder: "e.g. National Vice President" },
       ]}
       fieldsAfterList={[
-        { key: "executiveLabel", label: "Executive Committee Label", placeholder: "e.g. Label above the committee names" },
+        {
+          key: "executiveLabel",
+          label: "Executive Committee Label",
+          placeholder: "e.g. Label above the committee names",
+        },
       ]}
     />
   );

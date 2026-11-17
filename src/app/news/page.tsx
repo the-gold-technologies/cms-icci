@@ -5,7 +5,16 @@ import Link from "next/link";
 import { PageHeader } from "@/components/PageHeader";
 import { DeleteConfirmModal } from "@/components/DeleteConfirmModal";
 import { CategoryManager } from "@/components/CategoryManager";
-import { ArrowDown, ArrowUp, Calendar, Edit2, ExternalLink, Plus, Sparkles, Trash2 } from "lucide-react";
+import {
+  ArrowDown,
+  ArrowUp,
+  Calendar,
+  Edit2,
+  ExternalLink,
+  Plus,
+  Sparkles,
+  Trash2,
+} from "lucide-react";
 import { useCollection } from "@/lib/useCollection";
 
 interface Article {
@@ -44,7 +53,12 @@ export default function NewsPage() {
         }
       />
 
-      <CategoryManager type="news" activeCategory={category} onSelectCategory={setCategory} allowAll />
+      <CategoryManager
+        type="news"
+        activeCategory={category}
+        onSelectCategory={setCategory}
+        allowAll
+      />
 
       {loading ? (
         <div className="py-20 text-center text-gray-400 text-sm">Loading articles...</div>
@@ -76,7 +90,8 @@ export default function NewsPage() {
                     </div>
                     {homeRank < 4 && (
                       <div className="absolute top-3 left-3 px-2 py-0.5 rounded-full text-[9px] font-bold bg-[#ee6a2c] text-white flex items-center gap-1 shadow-xs">
-                        <Sparkles className="w-2.5 h-2.5" /> {homeRank === 0 ? "Home Featured" : "On Home"}
+                        <Sparkles className="w-2.5 h-2.5" />{" "}
+                        {homeRank === 0 ? "Home Featured" : "On Home"}
                       </div>
                     )}
                   </div>
@@ -85,8 +100,12 @@ export default function NewsPage() {
                       <Calendar className="w-3 h-3" />
                       <span>{item.date}</span>
                     </div>
-                    <h3 className="text-sm font-bold text-gray-900 line-clamp-2 leading-snug">{item.title}</h3>
-                    <p className="text-xs text-gray-500 mt-2 line-clamp-3 leading-relaxed">{item.excerpt}</p>
+                    <h3 className="text-sm font-bold text-gray-900 line-clamp-2 leading-snug">
+                      {item.title}
+                    </h3>
+                    <p className="text-xs text-gray-500 mt-2 line-clamp-3 leading-relaxed">
+                      {item.excerpt}
+                    </p>
                     {WEBSITE && (
                       <a
                         href={`${WEBSITE}/news/${item.slug}`}
@@ -104,37 +123,37 @@ export default function NewsPage() {
                     {homeRank === 0 ? "Home featured" : homeRank < 4 ? "On home page" : "News page"}
                   </span>
                   <div className="flex items-center gap-1">
-                  <button
-                    type="button"
-                    disabled={idx === 0}
-                    onClick={() => move(shown, idx, -1)}
-                    className="p-2 text-gray-500 hover:text-gray-900 hover:bg-white rounded-lg transition-colors cursor-pointer disabled:opacity-30"
-                    title="Move up"
-                  >
-                    <ArrowUp className="w-4 h-4" />
-                  </button>
-                  <button
-                    type="button"
-                    disabled={idx === shown.length - 1}
-                    onClick={() => move(shown, idx, 1)}
-                    className="p-2 text-gray-500 hover:text-gray-900 hover:bg-white rounded-lg transition-colors cursor-pointer disabled:opacity-30"
-                    title="Move down"
-                  >
-                    <ArrowDown className="w-4 h-4" />
-                  </button>
-                  <Link
-                    href={`/news/edit/${item.id}`}
-                    className="p-2 text-gray-500 hover:text-[#d4561b] hover:bg-white rounded-lg transition-colors"
-                  >
-                    <Edit2 className="w-4 h-4" />
-                  </Link>
-                  <button
-                    type="button"
-                    onClick={() => setDeleteId(item.id)}
-                    className="p-2 text-gray-500 hover:text-red-600 hover:bg-white rounded-lg transition-colors cursor-pointer"
-                  >
-                    <Trash2 className="w-4 h-4" />
-                  </button>
+                    <button
+                      type="button"
+                      disabled={idx === 0}
+                      onClick={() => move(shown, idx, -1)}
+                      className="p-2 text-gray-500 hover:text-gray-900 hover:bg-white rounded-lg transition-colors cursor-pointer disabled:opacity-30"
+                      title="Move up"
+                    >
+                      <ArrowUp className="w-4 h-4" />
+                    </button>
+                    <button
+                      type="button"
+                      disabled={idx === shown.length - 1}
+                      onClick={() => move(shown, idx, 1)}
+                      className="p-2 text-gray-500 hover:text-gray-900 hover:bg-white rounded-lg transition-colors cursor-pointer disabled:opacity-30"
+                      title="Move down"
+                    >
+                      <ArrowDown className="w-4 h-4" />
+                    </button>
+                    <Link
+                      href={`/news/edit/${item.id}`}
+                      className="p-2 text-gray-500 hover:text-[#d4561b] hover:bg-white rounded-lg transition-colors"
+                    >
+                      <Edit2 className="w-4 h-4" />
+                    </Link>
+                    <button
+                      type="button"
+                      onClick={() => setDeleteId(item.id)}
+                      className="p-2 text-gray-500 hover:text-red-600 hover:bg-white rounded-lg transition-colors cursor-pointer"
+                    >
+                      <Trash2 className="w-4 h-4" />
+                    </button>
                   </div>
                 </div>
               </div>

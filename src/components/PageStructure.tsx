@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Eye, Layout, BadgeCheck, ShieldAlert } from "lucide-react";
+import { ArrowRight, Eye, Layout, BadgeCheck } from "lucide-react";
 
 import { SITE_PAGES } from "@/lib/site-pages";
 

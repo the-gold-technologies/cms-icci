@@ -18,7 +18,15 @@ const normalize = (d: any = {}) => ({
 });
 
 export function AboutUsSection({ initialData }: { initialData?: any }) {
-  const { isOpen, setIsOpen, content: c, set, loading, saved, handleSave } = useSectionEditor({
+  const {
+    isOpen,
+    setIsOpen,
+    content: c,
+    set,
+    loading,
+    saved,
+    handleSave,
+  } = useSectionEditor({
     slug: "about",
     section: "AboutUsSection",
     label: "About Us",

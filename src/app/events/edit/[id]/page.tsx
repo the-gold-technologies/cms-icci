@@ -21,7 +21,10 @@ export default async function EditEventPage({ params }: { params: Promise<{ id: 
         <ArrowLeft className="w-4 h-4" />
         <span>Back to Events</span>
       </Link>
-      <PageHeader title="Edit Event" description="Update the event details or move it to Past events." />
+      <PageHeader
+        title="Edit Event"
+        description="Update the event details or move it to Past events."
+      />
       <EventForm initialData={JSON.parse(JSON.stringify(item))} isEdit />
     </div>
   );

@@ -13,7 +13,12 @@ export function ChaptersSection({ initialData }: { initialData?: any }) {
       label="State Chapters"
       initialData={initialData}
       fields={[
-        { key: "intro", label: "Intro Paragraph", placeholder: "e.g. Sentence under the heading", multiline: true },
+        {
+          key: "intro",
+          label: "Intro Paragraph",
+          placeholder: "e.g. Sentence under the heading",
+          multiline: true,
+        },
       ]}
       listKey="chapters"
       listTitle="Chapters"

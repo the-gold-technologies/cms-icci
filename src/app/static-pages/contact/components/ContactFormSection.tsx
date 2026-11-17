@@ -13,7 +13,15 @@ const FIELD_NAMES = ["name", "email", "subject", "message"];
 const normalize = (d: any = {}) => ({ ...normalizeFormCopy(d, FIELD_NAMES) });
 
 export function ContactFormSection({ initialData }: { initialData?: any }) {
-  const { isOpen, setIsOpen, content: c, set, loading, saved, handleSave } = useSectionEditor({
+  const {
+    isOpen,
+    setIsOpen,
+    content: c,
+    set,
+    loading,
+    saved,
+    handleSave,
+  } = useSectionEditor({
     slug: "contact",
     section: "ContactFormSection",
     label: "Contact form",
@@ -40,7 +48,9 @@ export function ContactFormSection({ initialData }: { initialData?: any }) {
       />
       <EnquiryFormFields
         value={c}
-        onChange={(next) => (Object.keys(next) as (keyof typeof next)[]).forEach((k) => set(k, next[k]))}
+        onChange={(next) =>
+          (Object.keys(next) as (keyof typeof next)[]).forEach((k) => set(k, next[k]))
+        }
       />
     </SectionShell>
   );

@@ -59,7 +59,8 @@ export async function PUT(req: Request, { params }: Params) {
       },
     });
 
-    if (existing.img && existing.img !== img) deleteCloudinaryAsset(existing.img).catch(console.error);
+    if (existing.img && existing.img !== img)
+      deleteCloudinaryAsset(existing.img).catch(console.error);
     revalidateWebsite(WebsiteTag.news, WebsiteTag.page("home"));
     return NextResponse.json({ success: true, data: updated });
   } catch (error: any) {
@@ -88,6 +89,9 @@ export async function DELETE(_req: Request, { params }: Params) {
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error("Delete news error:", error);
-    return NextResponse.json({ success: false, error: "Failed to delete article" }, { status: 500 });
+    return NextResponse.json(
+      { success: false, error: "Failed to delete article" },
+      { status: 500 },
+    );
   }
 }

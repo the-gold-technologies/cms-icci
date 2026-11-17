@@ -21,7 +21,10 @@ export default async function EditLeaderPage({ params }: { params: Promise<{ id:
         <ArrowLeft className="w-4 h-4" />
         <span>Back to Leadership</span>
       </Link>
-      <PageHeader title="Edit Leader" description="Update name, role, organisation, bio and portrait." />
+      <PageHeader
+        title="Edit Leader"
+        description="Update name, role, organisation, bio and portrait."
+      />
       <LeaderForm initialData={JSON.parse(JSON.stringify(item))} isEdit />
     </div>
   );

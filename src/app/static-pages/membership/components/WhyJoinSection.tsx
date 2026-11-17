@@ -13,7 +13,12 @@ export function WhyJoinSection({ initialData }: { initialData?: any }) {
       label="Why Join"
       initialData={initialData}
       fields={[
-        { key: "intro", label: "Intro Paragraph", placeholder: "e.g. Who membership is open to", multiline: true },
+        {
+          key: "intro",
+          label: "Intro Paragraph",
+          placeholder: "e.g. Who membership is open to",
+          multiline: true,
+        },
       ]}
       listKey="benefits"
       listTitle="Benefits"
