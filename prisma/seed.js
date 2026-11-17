@@ -62,6 +62,62 @@ const PAGES = [
     metaTitle: "ICCI – Indian Chamber of Construction Industry",
     metaDescription:
       "The Indian Chamber of Construction Industry (ICCI) unites contractors, builders, consultants, suppliers and allied professionals to collaborate, innovate and build a better India.",
+    schema: JSON.stringify(
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://icci.co.in/#website",
+            url: "https://icci.co.in/",
+            name: "Indian Chamber of Construction Industry",
+            alternateName: "ICCI",
+            description:
+              "The Indian Chamber of Construction Industry (ICCI) unites contractors, builders, consultants, suppliers and allied professionals to collaborate, innovate and build a better India.",
+            publisher: { "@id": "https://icci.co.in/#organization" },
+            inLanguage: "en-IN",
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://icci.co.in/#organization",
+            name: "Indian Chamber of Construction Industry",
+            alternateName: "ICCI",
+            url: "https://icci.co.in/",
+            logo: "https://res.cloudinary.com/dpa93copz/image/upload/v1794909790/icci/brand/icci-logo_1794909790717.webp",
+            description:
+              "The Indian Chamber of Construction Industry (ICCI) unites contractors, builders, consultants, suppliers and allied professionals to collaborate, innovate and build a better India.",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress:
+                "ICCI Secretariat, 3rd Floor, PHD House, 4/2 August Kranti Marg, Siri Institutional Area, Hauz Khas",
+              addressLocality: "New Delhi",
+              postalCode: "110016",
+              addressCountry: "IN",
+            },
+            telephone: "+91 93157 00465",
+            email: "contact@icci.co.in",
+            sameAs: [
+              "https://www.facebook.com/profile.php?id=61595681472168",
+              "https://www.instagram.com/icci.official.2026/",
+              "https://www.linkedin.com/company/indian-chamber-of-construction-industry/",
+              "https://x.com/icci_official",
+            ],
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://icci.co.in/#webpage",
+            url: "https://icci.co.in/",
+            name: "ICCI – Indian Chamber of Construction Industry",
+            isPartOf: { "@id": "https://icci.co.in/#website" },
+            about: { "@id": "https://icci.co.in/#organization" },
+            description:
+              "The Indian Chamber of Construction Industry (ICCI) unites contractors, builders, consultants, suppliers and allied professionals to collaborate, innovate and build a better India.",
+          },
+        ],
+      },
+      null,
+      2,
+    ),
   },
   {
     slug: "about",
@@ -70,6 +126,47 @@ const PAGES = [
     metaTitle: "About – ICCI",
     metaDescription:
       "The Indian Chamber of Construction Industry is a not-for-profit organisation representing, promoting and protecting the interests of India’s construction and allied industries.",
+    schema: JSON.stringify(
+      {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "@id": "https://icci.co.in/about#webpage",
+        url: "https://icci.co.in/about",
+        name: "About Us – Indian Chamber of Construction Industry",
+        description:
+          "The Indian Chamber of Construction Industry is a not-for-profit organisation representing, promoting and protecting the interests of India’s construction and allied industries.",
+        isPartOf: {
+          "@type": "WebSite",
+          "@id": "https://icci.co.in/#website",
+          name: "Indian Chamber of Construction Industry",
+          url: "https://icci.co.in/",
+        },
+        mainEntity: {
+          "@type": "Organization",
+          "@id": "https://icci.co.in/#organization",
+          name: "Indian Chamber of Construction Industry",
+          alternateName: "ICCI",
+          url: "https://icci.co.in/",
+          logo: "https://res.cloudinary.com/dpa93copz/image/upload/v1794909790/icci/brand/icci-logo_1794909790717.webp",
+          description:
+            "The Indian Chamber of Construction Industry is a not-for-profit organisation representing, promoting and protecting the interests of India's construction and allied industries.",
+          foundingLocation: {
+            "@type": "Place",
+            name: "New Delhi, India",
+          },
+          address: {
+            "@type": "PostalAddress",
+            streetAddress:
+              "ICCI Secretariat, 3rd Floor, PHD House, 4/2 August Kranti Marg, Siri Institutional Area, Hauz Khas",
+            addressLocality: "New Delhi",
+            postalCode: "110016",
+            addressCountry: "IN",
+          },
+        },
+      },
+      null,
+      2,
+    ),
   },
   {
     slug: "leadership",
@@ -78,6 +175,42 @@ const PAGES = [
     metaTitle: "Leadership – ICCI",
     metaDescription:
       "The national office bearers and National Executive Committee of the Indian Chamber of Construction Industry.",
+    schema: JSON.stringify(
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfilePage",
+        "@id": "https://icci.co.in/leadership#webpage",
+        url: "https://icci.co.in/leadership",
+        name: "Leadership – Indian Chamber of Construction Industry",
+        description:
+          "The national office bearers and National Executive Committee of the Indian Chamber of Construction Industry.",
+        isPartOf: {
+          "@type": "WebSite",
+          "@id": "https://icci.co.in/#website",
+          name: "Indian Chamber of Construction Industry",
+          url: "https://icci.co.in/",
+        },
+        mainEntity: {
+          "@type": "Organization",
+          "@id": "https://icci.co.in/#organization",
+          name: "Indian Chamber of Construction Industry",
+          url: "https://icci.co.in/",
+          member: [
+            {
+              "@type": "Person",
+              name: "Ved Khurana",
+              jobTitle: "National President",
+              worksFor: {
+                "@type": "Organization",
+                name: "Globe Civil Projects Limited",
+              },
+            },
+          ],
+        },
+      },
+      null,
+      2,
+    ),
   },
   {
     slug: "initiatives",
@@ -85,6 +218,31 @@ const PAGES = [
     route: "/initiatives",
     metaTitle: "Initiatives – ICCI",
     metaDescription: "ICCI's key initiatives, objectives and the stakeholders it represents.",
+    schema: JSON.stringify(
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": "https://icci.co.in/initiatives#webpage",
+        url: "https://icci.co.in/initiatives",
+        name: "Initiatives – Indian Chamber of Construction Industry",
+        description:
+          "ICCI's key initiatives, objectives and the stakeholders it represents across India's construction and infrastructure sector.",
+        isPartOf: {
+          "@type": "WebSite",
+          "@id": "https://icci.co.in/#website",
+          name: "Indian Chamber of Construction Industry",
+          url: "https://icci.co.in/",
+        },
+        publisher: {
+          "@type": "Organization",
+          "@id": "https://icci.co.in/#organization",
+          name: "Indian Chamber of Construction Industry",
+          url: "https://icci.co.in/",
+        },
+      },
+      null,
+      2,
+    ),
   },
   {
     slug: "events",
@@ -92,6 +250,31 @@ const PAGES = [
     route: "/events",
     metaTitle: "Events – ICCI",
     metaDescription: "Upcoming and past ICCI conferences, meetings and workshops.",
+    schema: JSON.stringify(
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "@id": "https://icci.co.in/events#webpage",
+        url: "https://icci.co.in/events",
+        name: "Events – Indian Chamber of Construction Industry",
+        description:
+          "Upcoming and past ICCI conferences, meetings, workshops and industry exhibitions.",
+        isPartOf: {
+          "@type": "WebSite",
+          "@id": "https://icci.co.in/#website",
+          name: "Indian Chamber of Construction Industry",
+          url: "https://icci.co.in/",
+        },
+        publisher: {
+          "@type": "Organization",
+          "@id": "https://icci.co.in/#organization",
+          name: "Indian Chamber of Construction Industry",
+          url: "https://icci.co.in/",
+        },
+      },
+      null,
+      2,
+    ),
   },
   {
     slug: "news-and-articles",
@@ -100,6 +283,31 @@ const PAGES = [
     metaTitle: "News & Articles – ICCI",
     metaDescription:
       "Updates from the Indian Chamber of Construction Industry and the wider construction sector.",
+    schema: JSON.stringify(
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "@id": "https://icci.co.in/news#webpage",
+        url: "https://icci.co.in/news",
+        name: "News & Articles – Indian Chamber of Construction Industry",
+        description:
+          "Updates from the Indian Chamber of Construction Industry and the wider construction and infrastructure sector.",
+        isPartOf: {
+          "@type": "WebSite",
+          "@id": "https://icci.co.in/#website",
+          name: "Indian Chamber of Construction Industry",
+          url: "https://icci.co.in/",
+        },
+        publisher: {
+          "@type": "Organization",
+          "@id": "https://icci.co.in/#organization",
+          name: "Indian Chamber of Construction Industry",
+          url: "https://icci.co.in/",
+        },
+      },
+      null,
+      2,
+    ),
   },
   {
     slug: "contact",
@@ -107,6 +315,49 @@ const PAGES = [
     route: "/contact",
     metaTitle: "Contact – ICCI",
     metaDescription: "Get in touch with the Indian Chamber of Construction Industry.",
+    schema: JSON.stringify(
+      {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "@id": "https://icci.co.in/contact#webpage",
+        url: "https://icci.co.in/contact",
+        name: "Contact Us – Indian Chamber of Construction Industry",
+        description: "Get in touch with the Indian Chamber of Construction Industry.",
+        isPartOf: {
+          "@type": "WebSite",
+          "@id": "https://icci.co.in/#website",
+          name: "Indian Chamber of Construction Industry",
+          url: "https://icci.co.in/",
+        },
+        mainEntity: {
+          "@type": "Organization",
+          "@id": "https://icci.co.in/#organization",
+          name: "Indian Chamber of Construction Industry",
+          alternateName: "ICCI",
+          url: "https://icci.co.in/",
+          telephone: "+91 93157 00465",
+          email: "contact@icci.co.in",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress:
+              "ICCI Secretariat, 3rd Floor, PHD House, 4/2 August Kranti Marg, Siri Institutional Area, Hauz Khas",
+            addressLocality: "New Delhi",
+            postalCode: "110016",
+            addressCountry: "IN",
+          },
+          contactPoint: {
+            "@type": "ContactPoint",
+            telephone: "+91 93157 00465",
+            email: "contact@icci.co.in",
+            contactType: "Secretariat",
+            areaServed: "IN",
+            availableLanguage: ["English", "Hindi"],
+          },
+        },
+      },
+      null,
+      2,
+    ),
   },
   {
     slug: "membership",
@@ -114,6 +365,31 @@ const PAGES = [
     route: "/membership",
     metaTitle: "Membership – ICCI",
     metaDescription: "Why join ICCI, membership categories, eligibility and how to apply.",
+    schema: JSON.stringify(
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": "https://icci.co.in/membership#webpage",
+        url: "https://icci.co.in/membership",
+        name: "Membership – Indian Chamber of Construction Industry",
+        description:
+          "Why join ICCI, membership categories, eligibility and how to apply for membership in India's leading construction industry chamber.",
+        isPartOf: {
+          "@type": "WebSite",
+          "@id": "https://icci.co.in/#website",
+          name: "Indian Chamber of Construction Industry",
+          url: "https://icci.co.in/",
+        },
+        publisher: {
+          "@type": "Organization",
+          "@id": "https://icci.co.in/#organization",
+          name: "Indian Chamber of Construction Industry",
+          url: "https://icci.co.in/",
+        },
+      },
+      null,
+      2,
+    ),
   },
 ];
 
@@ -190,6 +466,7 @@ async function seedPages(staticPages) {
         targetKeywords: "",
         canonicalUrl,
         headingOptions: "h1",
+        schema: meta.schema || null,
       },
       update: OVERWRITE
         ? {
@@ -197,6 +474,7 @@ async function seedPages(staticPages) {
             metaTitle: meta.metaTitle,
             metaDescription: meta.metaDescription,
             canonicalUrl,
+            schema: meta.schema || null,
           }
         : {},
     });

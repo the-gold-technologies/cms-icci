@@ -12,6 +12,7 @@ const CORE_PAGES = SITE_PAGES.filter((p) => p.slug !== "home").map((p) => ({
   metaDescription: p.metaDescription,
   targetKeywords: "",
   canonicalUrl: canonicalFor(p.route),
+  schema: p.schema || null,
 }));
 
 export async function GET() {
@@ -32,6 +33,7 @@ export async function GET() {
             metaDescription: core.metaDescription,
             targetKeywords: core.targetKeywords,
             canonicalUrl: core.canonicalUrl,
+            schema: core.schema,
             visibility: "published",
           },
         });
@@ -45,6 +47,7 @@ export async function GET() {
             metaDescription: existing.metaDescription || core.metaDescription,
             targetKeywords: existing.targetKeywords || core.targetKeywords,
             canonicalUrl: existing.canonicalUrl || core.canonicalUrl,
+            schema: existing.schema || core.schema,
           },
         });
       }
