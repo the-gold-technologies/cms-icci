@@ -6,9 +6,7 @@ import toast from "react-hot-toast";
 import { InputField } from "@/components/InputField";
 import { TextAreaField } from "@/components/TextAreaField";
 import { SaveButton } from "@/components/SaveButton";
-
-const selectClass =
-  "w-full text-xs font-medium text-gray-800 bg-white border border-gray-200 rounded-xl px-3 py-2.5 focus:border-[#ee6a2c] focus:ring-1 focus:ring-[#ee6a2c] outline-none";
+import { SelectOrCustomField } from "@/components/SelectOrCustomField";
 
 export function EventForm({
   initialData,
@@ -80,20 +78,18 @@ export function EventForm({
           onChange={(e) => setLocation(e.target.value)}
           placeholder="e.g. Venue and city"
         />
-        <div className="flex flex-col gap-1.5">
-          <label className="text-xs font-semibold text-gray-600 mb-1.5 uppercase tracking-wide ml-1">
-            Status
-          </label>
-          <select
-            value={status}
-            onChange={(e) => setStatus(e.target.value)}
-            className={selectClass}
-          >
-            <option value="">Select...</option>
-            <option value="upcoming">Upcoming</option>
-            <option value="past">Past</option>
-          </select>
-        </div>
+        <SelectOrCustomField
+          label="Status"
+          value={status}
+          onChange={setStatus}
+          options={[
+            { label: "Upcoming", value: "upcoming" },
+            { label: "Past", value: "past" },
+          ]}
+          allowCustom={false}
+          placeholder="Select status..."
+          required
+        />
       </div>
       <TextAreaField
         label="Description"

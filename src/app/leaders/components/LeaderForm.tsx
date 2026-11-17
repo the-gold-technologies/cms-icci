@@ -7,11 +7,10 @@ import { InputField } from "@/components/InputField";
 import { TextAreaField } from "@/components/TextAreaField";
 import { ImagePickerField } from "@/components/ImagePickerField";
 import { SaveButton } from "@/components/SaveButton";
+import { SelectOrCustomField } from "@/components/SelectOrCustomField";
 import { slugify } from "@/lib/collection-input";
 import { LEADER_ROLES, LEADER_TIERS } from "@/lib/site-pages";
 
-const selectClass =
-  "w-full text-xs font-medium text-gray-800 bg-white border border-gray-200 rounded-xl px-3 py-2.5 focus:border-[#ee6a2c] focus:ring-1 focus:ring-[#ee6a2c] outline-none";
 const selectLabel = "text-xs font-semibold text-gray-600 mb-1.5 uppercase tracking-wide ml-1";
 
 export function LeaderForm({
@@ -120,31 +119,26 @@ export function LeaderForm({
           helperText="Links go to /leadership#<anchor>."
           placeholder="e.g. first-last"
         />
-        <div className="flex flex-col gap-1.5">
-          <label className={selectLabel}>Role</label>
-          <select value={role} onChange={(e) => setRole(e.target.value)} className={selectClass}>
-            <option value="">Select...</option>
-            {LEADER_ROLES.map((r) => (
-              <option key={r} value={r}>
-                {r}
-              </option>
-            ))}
-            {role && !(LEADER_ROLES as readonly string[]).includes(role) && (
-              <option value={role}>{role}</option>
-            )}
-          </select>
-        </div>
-        <div className="flex flex-col gap-1.5">
-          <label className={selectLabel}>Tier</label>
-          <select value={tier} onChange={(e) => setTier(e.target.value)} className={selectClass}>
-            <option value="">Select...</option>
-            {LEADER_TIERS.map((t) => (
-              <option key={t.key} value={t.key}>
-                {t.label}
-              </option>
-            ))}
-          </select>
-        </div>
+        <SelectOrCustomField
+          label="Role"
+          value={role}
+          onChange={setRole}
+          options={LEADER_ROLES as unknown as string[]}
+          placeholder="Select role..."
+          customPlaceholder="e.g. Patron, Chairman, Chief Advisor..."
+          helperText="Select from preset chamber roles or enter a custom designation."
+          required
+        />
+        <SelectOrCustomField
+          label="Tier"
+          value={tier}
+          onChange={setTier}
+          options={LEADER_TIERS.map((t) => ({ label: t.label, value: t.key }))}
+          placeholder="Select tier..."
+          customPlaceholder="e.g. advisory, patron, chapter..."
+          helperText="Groups the leader on the Leadership page."
+          required
+        />
       </div>
 
       <InputField

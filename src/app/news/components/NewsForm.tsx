@@ -7,15 +7,13 @@ import { InputField } from "@/components/InputField";
 import { TextAreaField } from "@/components/TextAreaField";
 import { ImagePickerField } from "@/components/ImagePickerField";
 import { SaveButton } from "@/components/SaveButton";
+import { SelectOrCustomField } from "@/components/SelectOrCustomField";
 import { slugify } from "@/lib/collection-input";
 
 interface NewsFormProps {
   initialData?: any;
   isEdit?: boolean;
 }
-
-const selectClass =
-  "w-full text-xs font-medium text-gray-800 bg-white border border-gray-200 rounded-xl px-3 py-2.5 focus:border-[#ee6a2c] focus:ring-1 focus:ring-[#ee6a2c] outline-none";
 
 export function NewsForm({ initialData, isEdit = false }: NewsFormProps) {
   const router = useRouter();
@@ -108,26 +106,16 @@ export function NewsForm({ initialData, isEdit = false }: NewsFormProps) {
           helperText="The article lives at /news/<slug>. Changing it breaks old links."
           placeholder="e.g. icci-annual-meet-2026"
         />
-        <div className="flex flex-col gap-1.5 px-0.5">
-          <label className="text-xs font-semibold text-gray-600 mb-1.5 uppercase tracking-wide ml-1">
-            Category
-          </label>
-          <select
-            value={category}
-            onChange={(e) => setCategory(e.target.value)}
-            className={selectClass}
-          >
-            <option value="">Select...</option>
-            {categories.map((c) => (
-              <option key={c} value={c}>
-                {c}
-              </option>
-            ))}
-            {category && !categories.includes(category) && (
-              <option value={category}>{category}</option>
-            )}
-          </select>
-        </div>
+        <SelectOrCustomField
+          label="Category"
+          value={category}
+          onChange={setCategory}
+          options={categories}
+          placeholder="Select category..."
+          customPlaceholder="e.g. Press Release, Event Brief..."
+          helperText="Choose a category or enter a custom one."
+          required
+        />
         <InputField
           label="Date"
           value={date}

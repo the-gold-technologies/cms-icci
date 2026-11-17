@@ -26,7 +26,7 @@ export async function POST(req: Request) {
     const body = await req.json();
     const name = text(body.name);
     const role = text(body.role);
-    const tier = body.tier === "executive" ? "executive" : "office-bearer";
+    const tier = text(body.tier) || "office-bearer";
     const slug = slugify(text(body.slug) || name);
     if (!name || !role || !slug) {
       return NextResponse.json(

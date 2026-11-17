@@ -51,12 +51,7 @@ export async function PUT(req: Request, { params }: Params) {
         slug,
         name: body.name !== undefined ? text(body.name) : existing.name,
         role: body.role !== undefined ? text(body.role) : existing.role,
-        tier:
-          body.tier !== undefined
-            ? body.tier === "executive"
-              ? "executive"
-              : "office-bearer"
-            : existing.tier,
+        tier: body.tier !== undefined ? text(body.tier) || "office-bearer" : existing.tier,
         org: body.org !== undefined ? text(body.org) : existing.org,
         photo,
         photoAlt: body.photoAlt !== undefined ? text(body.photoAlt) : existing.photoAlt,
