@@ -1,0 +1,628 @@
+{
+  "home": {
+    "HeroSection": {
+      "tagline": "Collaborate • Innovate • Transform",
+      "headline": "The unified voice of India's",
+      "scriptAccent": "construction",
+      "headlineSuffix": " industry.",
+      "primaryCtaLabel": "Join the Chamber",
+      "primaryCtaLink": "#join",
+      "secondaryCtaLabel": "Discover ICCI",
+      "secondaryCtaLink": "#about",
+      "slides": [
+        {
+          "tag": "Infrastructure",
+          "title": "Building the backbone of a nation",
+          "text": "Highways, bridges and metros connecting India.",
+          "image": "https://res.cloudinary.com/dpa93copz/image/upload/v1794909762/icci/home/photo-1541888946425-d81bb19240f5_1794909760546.webp",
+          "imageAlt": "Building the backbone of a nation"
+        },
+        {
+          "tag": "On Site",
+          "title": "Skilled hands, safer sites",
+          "text": "Championing workforce safety on every project.",
+          "image": "https://res.cloudinary.com/dpa93copz/image/upload/v1794909763/icci/home/photo-1504307651254-35680f356dfd_1794909763254.webp",
+          "imageAlt": "Skilled hands, safer sites"
+        },
+        {
+          "tag": "Urban Growth",
+          "title": "Skylines of a new India",
+          "text": "Developments shaping tomorrow's cities.",
+          "image": "https://res.cloudinary.com/dpa93copz/image/upload/v1794909764/icci/home/photo-1486406146926-c627a92ad1ab_1794909764287.webp",
+          "imageAlt": "Skylines of a new India"
+        },
+        {
+          "tag": "Planning & Design",
+          "title": "From blueprint to reality",
+          "text": "Architects and engineers working as one.",
+          "image": "https://res.cloudinary.com/dpa93copz/image/upload/v1794909765/icci/home/photo-1503387762-592deb58ef4e_1794909765253.webp",
+          "imageAlt": "From blueprint to reality"
+        },
+        {
+          "tag": "Rising Together",
+          "title": "Every project, a better India",
+          "text": "One Chamber for builders, state by state.",
+          "image": "https://res.cloudinary.com/dpa93copz/image/upload/v1794909766/icci/home/photo-1429497419816-9ca5cfb4571a_1794909766473.webp",
+          "imageAlt": "Every project, a better India"
+        }
+      ],
+      "trustPoints": [
+        "30+ members from 7 states",
+        "One unified industry voice"
+      ],
+      "membersValue": "30+",
+      "membersLabel": "Members from 7 states",
+      "membersCtaLabel": "Join them",
+      "membersCtaLink": "#join",
+      "fieldsLabel": "We represent",
+      "fields": [
+        {
+          "label": "Contractors",
+          "image": "https://res.cloudinary.com/dpa93copz/image/upload/v1794909768/icci/home/photo-1517089596392-fb9a9033e05b_1794909767816.webp",
+          "imageAlt": "Contractors"
+        },
+        {
+          "label": "Builders",
+          "image": "https://res.cloudinary.com/dpa93copz/image/upload/v1794909769/icci/home/photo-1531834685032-c34bf0d84c77_1794909768941.webp",
+          "imageAlt": "Builders"
+        },
+        {
+          "label": "Consultants",
+          "image": "https://res.cloudinary.com/dpa93copz/image/upload/v1794909770/icci/home/photo-1581092160562-40aa08e78837_1794909770084.webp",
+          "imageAlt": "Consultants"
+        },
+        {
+          "label": "Suppliers",
+          "image": "https://res.cloudinary.com/dpa93copz/image/upload/v1794909771/icci/home/photo-1553413077-190dd305871c_1794909770978.webp",
+          "imageAlt": "Suppliers"
+        }
+      ]
+    },
+    "HighlightsSection": {
+      "stats": [
+        {
+          "value": "30+",
+          "label": "Members"
+        },
+        {
+          "value": "7",
+          "label": "States"
+        },
+        {
+          "value": "1",
+          "label": "Unified Industry Voice"
+        },
+        {
+          "value": "Pan-India",
+          "label": "Chapter Vision"
+        }
+      ]
+    },
+    "AboutSection": {
+      "tagline": "About the Chamber",
+      "headline": "A recognised platform for everyone who builds India.",
+      "description": "ICCI was formed by industry leaders who felt the need for one credible, organised body to represent the construction and allied industries. Today the Chamber brings together 30+ members from 7 states, with a vision to establish chapters in every state.\n\nThe Chamber works as a bridge between the industry and Government departments — raising members' concerns, contributing to policy, and helping businesses of every size grow with fairness, quality and transparency.",
+      "highlight": "30+ members from 7 states",
+      "cards": [
+        {
+          "title": "Background & Formation",
+          "text": "Founded by experienced contractors and industry stakeholders to give the sector a unified voice."
+        },
+        {
+          "title": "Role in the Industry",
+          "text": "Networking, knowledge, skill development and quality standards for the built environment."
+        },
+        {
+          "title": "Representation",
+          "text": "Structured engagement with Central & State departments, PWD, CPWD and public bodies."
+        },
+        {
+          "title": "Pan-India Expansion",
+          "text": "A growing network of state chapters, each led by local industry leadership."
+        }
+      ]
+    },
+    "ObjectivesSection": {
+      "tagline": "Objectives",
+      "headline": "What the Chamber sets out to achieve",
+      "linkLabel": "See how we work",
+      "linkHref": "/initiatives"
+    },
+    "RepresentationSection": {
+      "tagline": "Industry Representation",
+      "headline": "One chamber. Every stakeholder in construction.",
+      "intro": "ICCI represents the full value chain of the construction and allied industries — and engages with Government departments, public bodies and policy makers on their behalf."
+    },
+    "InitiativesSection": {
+      "tagline": "Key Initiatives",
+      "headline": "Four pillars that make ICCI work for its members",
+      "intro": "A practical framework designed to position ICCI as the central platform for contractors, subcontractors, workers and departmental stakeholders.",
+      "linkLabel": "Explore initiatives",
+      "linkHref": "/initiatives"
+    },
+    "LeadershipSection": {
+      "tagline": "National Office Bearers",
+      "headline": "The people leading the Chamber",
+      "intro": "Experienced industry leaders who came together to found ICCI and now steer it nationally.",
+      "linkLabel": "Meet the full leadership",
+      "linkHref": "/leadership"
+    },
+    "MembershipSection": {
+      "tagline": "Membership",
+      "headline": "Join the chamber that represents your business",
+      "intro": "ICCI membership is open to businesses, professionals and organisations across the construction and allied industries.",
+      "linkLabel": "Membership details",
+      "linkHref": "/membership",
+      "benefitsHeading": "Benefits of membership"
+    },
+    "NewsSection": {
+      "tagline": "News & Articles",
+      "headline": "Latest from the Chamber",
+      "linkLabel": "View all",
+      "linkHref": "/news",
+      "readMoreLabel": "Read more"
+    }
+  },
+  "about": {
+    "AboutHeroSection": {
+      "tagline": "About ICCI",
+      "headline": "Building a stronger",
+      "scriptAccent": "construction",
+      "headlineSuffix": " industry, together.",
+      "image": "https://res.cloudinary.com/dpa93copz/image/upload/v1794909772/icci/about/photo-1503387762-592deb58ef4e_1794909772143.webp",
+      "imageAlt": ""
+    },
+    "AboutUsSection": {
+      "tagline": "About Us",
+      "image": "https://res.cloudinary.com/dpa93copz/image/upload/v1794909773/icci/about/photo-1504307651254-35680f356dfd_1794909773257.webp",
+      "imageAlt": "Construction site",
+      "badgeLabel": "Not-for-profit",
+      "badgeTitle": "Nationwide mandate",
+      "lead": "The Indian Chamber of Construction Industry (ICCI) is a not-for-profit organisation established to represent, promote, and protect the interests of India’s construction and allied industries. ICCI serves as a platform for enterprises, professionals, industry leaders, policymakers, experts, and other stakeholders to collaborate towards a competitive, transparent, progressive, and sustainable construction ecosystem.",
+      "more": "ICCI works to strengthen enterprises across the sector, including Micro, Small and Medium Enterprises (MSMEs) and large organisations, by promoting innovation, market orientation, self-reliance, quality improvement, skill development, professional training, and sound corporate governance. It also encourages applied research in economics, public policy, management, and technology, translating knowledge and evidence into meaningful industry dialogue and policy inputs.\n\nThrough seminars, conferences, workshops, research publications, consultations, and industry forums, ICCI facilitates knowledge exchange and consensus-building. It also seeks to foster partnerships among government, businesses, institutions, donors, and communities to support initiatives in livelihood generation, education, public health, environmental sustainability, and inclusive development.\n\nWith a nationwide mandate, ICCI aims to contribute constructively to India’s economic and industrial development by strengthening the construction sector and the wider ecosystem in which it operates."
+    },
+    "FocusAreasSection": {
+      "tagline": "What We Work Towards",
+      "headline": "Where ICCI focuses its efforts",
+      "items": [
+        {
+          "title": "Representation & Policy",
+          "text": "Effectively representing the sector before government bodies, regulators and policymakers."
+        },
+        {
+          "title": "Stronger Enterprises",
+          "text": "Helping MSMEs and large organisations become innovative, market-oriented and self-reliant."
+        },
+        {
+          "title": "Research & Knowledge",
+          "text": "Applied research, policy briefs, seminars and workshops that drive evidence-based dialogue."
+        },
+        {
+          "title": "Partnerships for Development",
+          "text": "Livelihoods, education, public health, environmental sustainability and inclusive growth."
+        }
+      ]
+    },
+    "MissionVisionSection": {
+      "missionTagline": "Our Mission",
+      "missionLead": "ICCI’s mission is to strengthen India’s construction and allied industries by creating a credible platform for representation, collaboration, knowledge, capacity building, and responsible growth.",
+      "missionMore": "We work to ensure that the interests and perspectives of the construction sector are effectively represented before government bodies, regulatory authorities, and policymakers. ICCI seeks to contribute informed industry perspectives to economic legislation, corporate law, trade policy, and regulatory frameworks, with the objective of promoting a competitive, transparent, and progressive business environment.\n\nA core part of our mission is enabling enterprises of all sizes—particularly MSMEs and emerging businesses—to become more innovative, capable, market-oriented, and self-reliant. Through training, skill development, consultancy, quality improvement, research, and knowledge-sharing initiatives, ICCI seeks to build stronger institutional and professional capabilities across the sector.\n\nICCI also brings together industry leaders, professionals, experts, government stakeholders, and the wider business community to exchange knowledge, address common challenges, and develop opportunities for collaboration. We promote evidence-based dialogue through applied research, policy briefs, reports, seminars, conferences, and workshops.\n\nBeyond industry development, ICCI is committed to facilitating partnerships that contribute to livelihood generation, education, public health, environmental sustainability, and inclusive development—connecting economic progress with broader national development priorities.",
+      "visionTagline": "Our Vision",
+      "visionLead": "ICCI envisions a competitive, innovative, responsible, and globally connected Indian construction industry that contributes meaningfully to the nation’s sustainable and inclusive development.",
+      "visionMore": "Our vision is to help build an industry ecosystem in which businesses, professionals, institutions, government, and communities work together to address emerging challenges and unlock new opportunities. We aspire to see Indian construction and allied enterprises equipped with the capabilities, knowledge, skills, technology, and governance practices required to compete effectively in a rapidly evolving domestic and global environment.\n\nICCI seeks to become a trusted platform for constructive industry–government engagement, enabling informed dialogue and practical policy inputs that support a transparent, progressive, and business-friendly environment. We envision stronger enterprises, particularly MSMEs, supported by access to knowledge, training, research, expertise, partnerships, and opportunities for continuous improvement.\n\nWe also see research, innovation, and knowledge exchange as essential foundations for the sector’s long-term growth. By bringing together industry leaders, researchers, professionals, policymakers, and institutions, ICCI aims to encourage evidence-based thinking and collaborative solutions to economic, technological, managerial, and policy challenges.\n\nUltimately, ICCI’s vision extends beyond industry growth. We aspire to contribute to an India where the growth of construction and related industries creates wider opportunities for livelihoods, skills, education, environmental sustainability, and inclusive development—aligning sectoral progress with the country’s broader development goals."
+    },
+    "LeadershipSection": {
+      "tagline": "National Office Bearers",
+      "headline": "The people leading the Chamber",
+      "intro": "Experienced industry leaders who came together to found ICCI and now steer it nationally.",
+      "linkLabel": "Meet the full leadership",
+      "linkHref": "/leadership"
+    },
+    "ChaptersSection": {
+      "tagline": "State Chapters",
+      "headline": "ICCI across India",
+      "intro": "Each state chapter is led by local industry leadership, with a vision to establish a chapter in every state.",
+      "chapters": [
+        {
+          "state": "State",
+          "head": "Chapter Head",
+          "contact": "chapter@email"
+        },
+        {
+          "state": "State",
+          "head": "Chapter Head",
+          "contact": "chapter@email"
+        },
+        {
+          "state": "State",
+          "head": "Chapter Head",
+          "contact": "chapter@email"
+        },
+        {
+          "state": "State",
+          "head": "Chapter Head",
+          "contact": "chapter@email"
+        },
+        {
+          "state": "State",
+          "head": "Chapter Head",
+          "contact": "chapter@email"
+        },
+        {
+          "state": "State",
+          "head": "Chapter Head",
+          "contact": "chapter@email"
+        },
+        {
+          "state": "State",
+          "head": "Chapter Head",
+          "contact": "chapter@email"
+        }
+      ]
+    }
+  },
+  "leadership": {
+    "LeadershipHeroSection": {
+      "tagline": "Leadership",
+      "headline": "The people building the",
+      "scriptAccent": "Chamber",
+      "headlineSuffix": ".",
+      "image": "https://res.cloudinary.com/dpa93copz/image/upload/v1794909765/icci/home/photo-1503387762-592deb58ef4e_1794909765253.webp",
+      "imageAlt": ""
+    },
+    "RosterSection": {
+      "groups": [
+        {
+          "label": "National President",
+          "role": "National President"
+        },
+        {
+          "label": "National Vice Presidents",
+          "role": "National Vice President"
+        },
+        {
+          "label": "National General Secretary",
+          "role": "National General Secretary"
+        },
+        {
+          "label": "National Joint Secretary",
+          "role": "National Joint Secretary"
+        },
+        {
+          "label": "National Treasurer",
+          "role": "National Treasurer"
+        }
+      ],
+      "executiveLabel": "National Executive Committee"
+    },
+    "PresidentSection": {
+      "tagline": "National President",
+      "headline": "Leading the Chamber",
+      "readProfileLabel": "Read profile"
+    },
+    "VicePresidentsSection": {
+      "tagline": "National Vice Presidents",
+      "headline": "Steering the national agenda"
+    },
+    "SecretariesSection": {
+      "tagline": "Secretaries & Treasurer",
+      "headline": "Running the Chamber day to day"
+    },
+    "ExecutiveCommitteeSection": {
+      "tagline": "National Executive Committee",
+      "headline": "Industry leaders from across the sector"
+    }
+  },
+  "initiatives": {
+    "InitiativesHeroSection": {
+      "tagline": "Initiatives",
+      "headline": "How ICCI works for the",
+      "scriptAccent": "construction",
+      "headlineSuffix": " industry.",
+      "image": "https://res.cloudinary.com/dpa93copz/image/upload/v1794909762/icci/home/photo-1541888946425-d81bb19240f5_1794909760546.webp",
+      "imageAlt": ""
+    },
+    "KeyInitiativesSection": {
+      "tagline": "Key Initiatives",
+      "headline": "Four pillars that make ICCI work for its members",
+      "intro": "A practical framework designed to position ICCI as the central platform for contractors, subcontractors, workers and departmental stakeholders.",
+      "items": [
+        {
+          "tag": "01",
+          "title": "Member Portal & Directory",
+          "text": "Structured, multi-tier registration for contractors, suppliers, consultants and skilled labour — enabling networking, procurement and verified subcontracting."
+        },
+        {
+          "tag": "02",
+          "title": "Grievance Redressal Desk",
+          "text": "A centralised, ticket-based support hub to help members with departmental payment delays, compliance queries, tender disputes and administrative issues."
+        },
+        {
+          "tag": "03",
+          "title": "Knowledge & Policy Advocacy",
+          "text": "Timely publication of Government updates, circulars, GST guidelines, PWD/CPWD norms and sustainable building guidelines."
+        },
+        {
+          "tag": "04",
+          "title": "Skill Development & Green Building",
+          "text": "Capacity-building workshops, PEB training, safety certifications and sustainable construction initiatives across chapters."
+        }
+      ]
+    },
+    "ObjectivesSection": {
+      "tagline": "Objectives",
+      "headline": "What the Chamber sets out to achieve",
+      "items": [
+        {
+          "title": "Represent the Industry",
+          "text": "Act as the collective voice of contractors, builders, consultants and suppliers before Central and State Government bodies."
+        },
+        {
+          "title": "Advocate Fair Policy",
+          "text": "Engage with departments on tendering norms, payment timelines, GST, PWD/CPWD guidelines and regulatory reform."
+        },
+        {
+          "title": "Enable Collaboration",
+          "text": "Build a trusted network for peer-to-peer partnerships, procurement and verified subcontracting across states."
+        },
+        {
+          "title": "Resolve Grievances",
+          "text": "Provide a structured channel to escalate payment delays, compliance queries, tender disputes and administrative issues."
+        },
+        {
+          "title": "Develop Skills",
+          "text": "Run capacity-building workshops, safety certifications and technical training for the construction workforce."
+        },
+        {
+          "title": "Promote Sustainable Building",
+          "text": "Champion green construction practices, modern methods such as PEB, and quality standards for long-lasting infrastructure."
+        }
+      ]
+    },
+    "WhoWeRepresentSection": {
+      "tagline": "Who We Represent",
+      "headline": "One chamber. Every stakeholder in construction.",
+      "intro": "ICCI engages with Government departments, public bodies and policy makers on behalf of the full value chain of the construction and allied industries.",
+      "ctaLabel": "Become a Member",
+      "ctaLink": "/membership",
+      "stakeholders": [
+        "Civil & Infrastructure Contractors",
+        "Subcontractors & Specialist Agencies",
+        "Construction Businesses & Developers",
+        "Consulting Engineers & Architects",
+        "Raw Material Manufacturers & Suppliers",
+        "Equipment & Technology Providers",
+        "Skilled Workforce & Site Professionals",
+        "Allied Industry Professionals"
+      ]
+    }
+  },
+  "events": {
+    "EventsHeroSection": {
+      "tagline": "Events",
+      "headline": "Conferences, meetings and",
+      "scriptAccent": "workshops",
+      "headlineSuffix": ".",
+      "image": "https://res.cloudinary.com/dpa93copz/image/upload/v1794909766/icci/home/photo-1429497419816-9ca5cfb4571a_1794909766473.webp",
+      "imageAlt": ""
+    },
+    "UpcomingEventsSection": {
+      "tagline": "Upcoming",
+      "headline": "Upcoming events",
+      "emptyText": "New events will be announced here soon.",
+      "emptyCtaLabel": "Contact the secretariat",
+      "emptyCtaLink": "/contact"
+    },
+    "PastEventsSection": {
+      "tagline": "Past",
+      "headline": "Past events",
+      "emptyText": "Reports and photos from past events will appear here.",
+      "emptyCtaLabel": "Contact the secretariat",
+      "emptyCtaLink": "/contact"
+    }
+  },
+  "news-and-articles": {
+    "NewsHeroSection": {
+      "tagline": "News & Articles",
+      "headline": "Updates from the",
+      "scriptAccent": "Chamber",
+      "headlineSuffix": " and the industry.",
+      "image": "https://res.cloudinary.com/dpa93copz/image/upload/v1794909772/icci/about/photo-1503387762-592deb58ef4e_1794909772143.webp",
+      "imageAlt": ""
+    },
+    "NewsBrowserSection": {
+      "allLabel": "All",
+      "latestBadge": "Latest",
+      "readFullStoryLabel": "Read the full story",
+      "browseTitle": "Browse by topic",
+      "shareTitle": "Have news to share?",
+      "shareText": "Members can send project milestones, event reports and industry updates for the Chamber to publish.",
+      "shareCtaLabel": "Contact the secretariat",
+      "shareCtaLink": "/contact"
+    },
+    "ArticlePageSection": {
+      "backLabel": "All news",
+      "backLink": "/news",
+      "moreTitle": "More from the Chamber"
+    }
+  },
+  "contact": {
+    "ContactHeroSection": {
+      "tagline": "Contact Us",
+      "headline": "Get in touch with",
+      "scriptAccent": "ICCI",
+      "headlineSuffix": ".",
+      "image": "https://res.cloudinary.com/dpa93copz/image/upload/v1794909773/icci/about/photo-1504307651254-35680f356dfd_1794909773257.webp",
+      "imageAlt": ""
+    },
+    "ContactDetailsSection": {
+      "addressLabel": "Office Address",
+      "phoneLabel": "Phone",
+      "emailLabel": "Email",
+      "mapTitle": "ICCI office location",
+      "mapEmbedUrl": "https://maps.google.com/maps?q=PHD%20House%2C%204%2F2%20August%20Kranti%20Marg%2C%20Siri%20Institutional%20Area%2C%20Hauz%20Khas%2C%20New%20Delhi%20110016&z=16&output=embed"
+    },
+    "ContactFormSection": {
+      "formTitle": "Send us an enquiry",
+      "fields": [
+        {
+          "name": "name",
+          "label": "Name",
+          "placeholder": "Your name"
+        },
+        {
+          "name": "email",
+          "label": "Email",
+          "placeholder": "you@company.com"
+        },
+        {
+          "name": "subject",
+          "label": "Subject",
+          "placeholder": "How can we help?"
+        },
+        {
+          "name": "message",
+          "label": "Message",
+          "placeholder": "Write your message…"
+        }
+      ],
+      "submitLabel": "Send Enquiry",
+      "successTitle": "Your message has been sent",
+      "successText": "Our team will get in touch with you shortly.",
+      "resetLabel": "Submit another response"
+    }
+  },
+  "membership": {
+    "MembershipHeroSection": {
+      "tagline": "Membership",
+      "headline": "Join the chamber that represents",
+      "scriptAccent": "your business",
+      "headlineSuffix": ".",
+      "image": "https://res.cloudinary.com/dpa93copz/image/upload/v1794909763/icci/home/photo-1504307651254-35680f356dfd_1794909763254.webp",
+      "imageAlt": ""
+    },
+    "WhyJoinSection": {
+      "tagline": "Why Join",
+      "headline": "What ICCI membership gives you",
+      "intro": "ICCI membership is open to businesses, professionals and organisations across the construction and allied industries.",
+      "benefits": [
+        "Representation of your concerns before Government departments",
+        "Access to the grievance redressal desk",
+        "Listing in the ICCI member network & directory",
+        "Policy circulars, tender and regulatory updates",
+        "Invitations to conferences, meetings and workshops",
+        "Business networking across state chapters",
+        "Training, certification and skill programmes",
+        "A say in shaping the future of the industry"
+      ]
+    },
+    "CategoriesSection": {
+      "tagline": "Membership Categories",
+      "headline": "Find the category that fits you",
+      "categories": [
+        {
+          "title": "Corporate Members",
+          "text": "Large construction and infrastructure companies shaping the sector."
+        },
+        {
+          "title": "Construction Businesses",
+          "text": "Contractors, builders and developers of every scale."
+        },
+        {
+          "title": "Businesses & Individuals",
+          "text": "Entrepreneurs and professionals associated with construction."
+        },
+        {
+          "title": "Consulting Engineers",
+          "text": "Design, structural, project management and quality consultants."
+        },
+        {
+          "title": "Manufacturers & Suppliers",
+          "text": "Raw material manufacturers, traders and supply-chain partners."
+        },
+        {
+          "title": "Allied Professionals",
+          "text": "Architects, surveyors, legal, finance and technology experts."
+        },
+        {
+          "title": "Other Stakeholders",
+          "text": "Any eligible organisation contributing to the built environment."
+        }
+      ],
+      "fallbackTitle": "Not sure where you fit?",
+      "fallbackCtaLabel": "Send an enquiry",
+      "fallbackCtaLink": "#join"
+    },
+    "HowToJoinSection": {
+      "tagline": "How to Join",
+      "headline": "Four steps to membership",
+      "steps": [
+        {
+          "title": "Send an enquiry",
+          "text": "Fill in the membership enquiry form with your business details."
+        },
+        {
+          "title": "Submit documents",
+          "text": "Our team shares the application form and the list of documents to attach."
+        },
+        {
+          "title": "Committee review",
+          "text": "The membership committee reviews your application."
+        },
+        {
+          "title": "Welcome to ICCI",
+          "text": "Once approved and the fee is paid, you join the member network."
+        }
+      ]
+    },
+    "MembershipEnquirySection": {
+      "tagline": "Become a Member",
+      "headline": "Apply for ICCI membership",
+      "intro": "Fill in your details and our team will reach out with next steps.",
+      "eligibilityTitle": "Eligibility",
+      "eligibilityText": "Any registered business, firm, professional or organisation engaged in construction or allied activities in India is eligible to apply. Applications are reviewed by the Chamber's membership committee.",
+      "formTitle": "Membership Enquiry",
+      "fields": [
+        {
+          "name": "name",
+          "label": "Full Name",
+          "placeholder": "Your name"
+        },
+        {
+          "name": "organisation",
+          "label": "Organisation / Company",
+          "placeholder": "Company name"
+        },
+        {
+          "name": "email",
+          "label": "Email",
+          "placeholder": "you@company.com"
+        },
+        {
+          "name": "phone",
+          "label": "Phone",
+          "placeholder": "+91"
+        },
+        {
+          "name": "category",
+          "label": "Membership Category",
+          "placeholder": "Select a category"
+        },
+        {
+          "name": "state",
+          "label": "State",
+          "placeholder": "e.g. Uttar Pradesh"
+        },
+        {
+          "name": "message",
+          "label": "Tell us about your business",
+          "placeholder": "Nature of work, experience, areas of operation…"
+        }
+      ],
+      "submitLabel": "Submit Membership Enquiry",
+      "successTitle": "Thank you for your interest in ICCI",
+      "successText": "Our team will get in touch with you shortly.",
+      "resetLabel": "Submit another response"
+    }
+  }
+}

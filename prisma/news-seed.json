@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "icci-founding-members",
+    "title": "ICCI brings together 30+ members from 7 states",
+    "category": "Chamber News",
+    "date": "October 2026",
+    "img": "https://res.cloudinary.com/dpa93copz/image/upload/v1794909787/icci/news/photo-1521791136064-7986c2920216_1794909786877.webp",
+    "imgAlt": "",
+    "excerpt": "The Chamber begins its journey as a unified platform for the construction and allied industries.",
+    "body": [
+      "This is placeholder text for the full article. The Chamber will supply the final copy, which will replace these paragraphs.",
+      "Each article can run to several paragraphs, covering the background, what it means for members, and any next steps or dates.",
+      "For questions about this update, members can contact the ICCI secretariat through the Contact page."
+    ],
+    "order": 0
+  },
+  {
+    "slug": "public-works-tendering-payment-norms",
+    "title": "Key updates on public works tendering & payment norms",
+    "category": "Government / Regulatory",
+    "date": "October 2026",
+    "img": "https://res.cloudinary.com/dpa93copz/image/upload/v1794909788/icci/news/photo-1450101499163-c8848c66ca85_1794909787824.webp",
+    "imgAlt": "",
+    "excerpt": "A summary of recent circulars and what they mean for contractors and suppliers.",
+    "body": [
+      "This is placeholder text for the full article. The Chamber will supply the final copy, which will replace these paragraphs.",
+      "Each article can run to several paragraphs, covering the background, what it means for members, and any next steps or dates.",
+      "For questions about this update, members can contact the ICCI secretariat through the Contact page."
+    ],
+    "order": 1
+  },
+  {
+    "slug": "green-building-practices",
+    "title": "Why green building practices matter for every contractor",
+    "category": "Articles & Insights",
+    "date": "October 2026",
+    "img": "https://res.cloudinary.com/dpa93copz/image/upload/v1794909789/icci/news/photo-1518005020951-eccb494ad742_1794909788921.webp",
+    "imgAlt": "",
+    "excerpt": "How sustainable construction is moving from a niche to a baseline expectation.",
+    "body": [
+      "This is placeholder text for the full article. The Chamber will supply the final copy, which will replace these paragraphs.",
+      "Each article can run to several paragraphs, covering the background, what it means for members, and any next steps or dates.",
+      "For questions about this update, members can contact the ICCI secretariat through the Contact page."
+    ],
+    "order": 2
+  },
+  {
+    "slug": "site-safety-skilling-workshop",
+    "title": "Site safety & skilling: upcoming member workshop",
+    "category": "Events",
+    "date": "October 2026",
+    "img": "https://res.cloudinary.com/dpa93copz/image/upload/v1794909773/icci/about/photo-1504307651254-35680f356dfd_1794909773257.webp",
+    "imgAlt": "",
+    "excerpt": "A hands-on session for members on safety standards and workforce skill development.",
+    "body": [
+      "This is placeholder text for the full article. The Chamber will supply the final copy, which will replace these paragraphs.",
+      "Each article can run to several paragraphs, covering the background, what it means for members, and any next steps or dates.",
+      "For questions about this update, members can contact the ICCI secretariat through the Contact page."
+    ],
+    "order": 3
+  }
+]

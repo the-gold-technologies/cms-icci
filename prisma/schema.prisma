@@ -1,0 +1,181 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String    @unique
+  emailVerified DateTime?
+  image         String?
+  password      String
+  role          String    @default("admin")
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+}
+
+/// Site-wide brand, contact, social, header/footer chrome and global SEO.
+model GlobalConfig {
+  id                   String   @id @default("global")
+  siteTitle            String   @default("ICCI – Indian Chamber of Construction Industry")
+  siteDescription      String   @default("")
+  favicon              String?
+  logo                 String?  // full lockup (footer + splash)
+  logoMark             String?  // emblem on light backgrounds (header when scrolled)
+  logoMarkWhite        String?  // emblem on photo backgrounds (header over hero)
+  ogImage              String?
+  phone                String?
+  email                String?
+  address              String?
+  facebookUrl          String?
+  instagramUrl         String?
+  youtubeUrl           String?
+  linkedinUrl          String?
+  xUrl                 String?
+  googleAnalyticsId    String?
+  gtmId                String?
+  searchConsoleId      String?
+  customHeaderScripts  String?
+  customFooterScripts  String?
+  socialLinks          Json?    // [{ key, label, href }] in display order (rail + footer)
+  footerContent        Json?    // header brand lines, footer headings, copyright
+  robotsTxt            String?
+  sitemapEnabled       Boolean  @default(true)
+  sitemapCustomContent String?
+  schema               String?
+  headingOptions       String?  @default("h1")
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+}
+
+/// National office bearers and National Executive Committee (website: /leadership, home, about).
+model Leader {
+  id        String   @id @default(cuid())
+  slug      String   @unique // anchor on /leadership (e.g. #ved-khurana)
+  name      String
+  role      String   // "National President", "National Vice President", ...
+  org       String?
+  photo     String?
+  photoAlt  String?
+  faceX     Float    @default(0.5) // face centre as a fraction of photo width
+  faceY     Float    @default(0.4) // face centre as a fraction of photo height
+  bio       Json     @default("[]") // string[] paragraphs
+  tier      String   @default("office-bearer") // "office-bearer" | "executive"
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+/// News & Articles (website: /news and /news/[slug]).
+model NewsItem {
+  id        String   @id @default(cuid())
+  title     String
+  slug      String   @unique
+  category  String
+  date      String   // e.g. "October 2026"
+  img       String
+  imgAlt    String?
+  excerpt   String
+  body      Json     @default("[]") // string[] paragraphs
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+/// Events (website: /events, upcoming + past).
+model Event {
+  id        String   @id @default(cuid())
+  title     String
+  date      String
+  location  String
+  text      String
+  isPast    Boolean  @default(false)
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model DynamicCategory {
+  id        String   @id @default(cuid())
+  type      String   // "news"
+  name      String
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([type, name])
+}
+
+/// Website form entries: "membership" (MembershipForm) and "contact" (ContactForm).
+model Submission {
+  id                 String   @id @default(cuid())
+  formType           String
+  fullName           String
+  email              String
+  phone              String?
+  organisation       String?
+  membershipCategory String?
+  state              String?
+  subject            String?
+  message            String   @default("")
+  status             String   @default("New") // "New", "In Review", "Contacted", "Closed"
+  internalNotes      String?
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+}
+
+model Page {
+  id              String    @id @default(cuid())
+  title           String?
+  slug            String    @unique
+  parent          String    @default("-")
+  order           Int       @default(0)
+  type            String    @default("static")
+  visibility      String    @default("published")
+  isStatic        Boolean   @default(false)
+  metaTitle       String?
+  metaDescription String?
+  targetKeywords  String?
+  canonicalUrl    String?
+  noIndex         Boolean   @default(false)
+  featuredImage   String?
+  ogTitle         String?
+  ogDescription   String?
+  ogImage         String?
+  schema          String?
+  headingOptions  String?   @default("h1")
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+  sections        Section[]
+}
+
+model Section {
+  id        String   @id @default(cuid())
+  pageId    String
+  type      String
+  content   Json     @default("{}")
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  page      Page     @relation(fields: [pageId], references: [id], onDelete: Cascade)
+
+  @@unique([pageId, type])
+}
+
+model NavLink {
+  id          String   @id @default(cuid())
+  label       String
+  url         String
+  type        String   @default("Main Link") // "Main Link", "Dropdown", "Dropdown Item", "Action Button"
+  parent      String   @default("-")
+  description String?
+  image       String?
+  order       Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}

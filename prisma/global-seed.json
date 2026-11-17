@@ -1,0 +1,118 @@
+{
+  "config": {
+    "siteTitle": "ICCI – Indian Chamber of Construction Industry",
+    "siteDescription": "The Indian Chamber of Construction Industry (ICCI) unites contractors, builders, consultants, suppliers and allied professionals to collaborate, innovate and build a better India.",
+    "logo": "https://res.cloudinary.com/dpa93copz/image/upload/v1794909790/icci/brand/icci-logo_1794909790717.webp",
+    "logoMark": "https://res.cloudinary.com/dpa93copz/image/upload/v1794909792/icci/brand/icci-mark_1794909791569.webp",
+    "logoMarkWhite": "https://res.cloudinary.com/dpa93copz/image/upload/v1794909793/icci/brand/icci-mark-white_1794909792688.webp",
+    "favicon": "https://res.cloudinary.com/dpa93copz/image/upload/v1794909794/icci/brand/apple-icon_1794909793672.webp",
+    "ogImage": "",
+    "address": "ICCI Secretariat, 3rd Floor, PHD House, 4/2 August Kranti Marg, Siri Institutional Area, Hauz Khas, New Delhi 110016",
+    "phone": "+91 93157 00465",
+    "email": "contact@icci.co.in",
+    "facebookUrl": "https://www.facebook.com/profile.php?id=61595681472168",
+    "instagramUrl": "https://www.instagram.com/icci.official.2026/",
+    "linkedinUrl": "https://www.linkedin.com/company/indian-chamber-of-construction-industry/",
+    "xUrl": "https://x.com/icci_official",
+    "youtubeUrl": "",
+    "socialLinks": [
+      {
+        "key": "facebook",
+        "label": "Facebook",
+        "href": "https://www.facebook.com/profile.php?id=61595681472168"
+      },
+      {
+        "key": "instagram",
+        "label": "Instagram",
+        "href": "https://www.instagram.com/icci.official.2026/"
+      },
+      {
+        "key": "linkedin",
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com/company/indian-chamber-of-construction-industry/"
+      },
+      {
+        "key": "x",
+        "label": "X (Twitter)",
+        "href": "https://x.com/icci_official"
+      }
+    ],
+    "footerContent": {
+      "headerBrandLine1": "Indian Chamber of",
+      "headerBrandLine2": "Construction Industry",
+      "logoAlt": "Indian Chamber of Construction Industry – Collaborate • Innovate • Transform",
+      "logoMarkAlt": "ICCI emblem",
+      "followUsLabel": "Follow Us",
+      "quickLinksTitle": "Quick Links",
+      "reachUsTitle": "Reach Us",
+      "copyrightText": "Indian Chamber of Construction Industry. All rights reserved."
+    },
+    "robotsTxt": "User-agent: *\nAllow: /\nDisallow: /api/\n\nSitemap: https://icci.co.in/sitemap.xml",
+    "sitemapEnabled": true,
+    "schema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Organization\",\n  \"@id\": \"https://icci.co.in/#organization\",\n  \"name\": \"Indian Chamber of Construction Industry\",\n  \"alternateName\": \"ICCI\",\n  \"url\": \"https://icci.co.in/\",\n  \"logo\": \"https://res.cloudinary.com/dpa93copz/image/upload/v1794909790/icci/brand/icci-logo_1794909790717.webp\",\n  \"description\": \"The Indian Chamber of Construction Industry (ICCI) unites contractors, builders, consultants, suppliers and allied professionals to collaborate, innovate and build a better India.\",\n  \"address\": {\n    \"@type\": \"PostalAddress\",\n    \"streetAddress\": \"ICCI Secretariat, 3rd Floor, PHD House, 4/2 August Kranti Marg, Siri Institutional Area, Hauz Khas\",\n    \"addressLocality\": \"New Delhi\",\n    \"postalCode\": \"110016\",\n    \"addressCountry\": \"IN\"\n  },\n  \"telephone\": \"+91 93157 00465\",\n  \"email\": \"contact@icci.co.in\",\n  \"sameAs\": [\n    \"https://www.facebook.com/profile.php?id=61595681472168\",\n    \"https://www.instagram.com/icci.official.2026/\",\n    \"https://www.linkedin.com/company/indian-chamber-of-construction-industry/\",\n    \"https://x.com/icci_official\"\n  ]\n}"
+  },
+  "navLinks": [
+    {
+      "id": "nav-about",
+      "label": "About",
+      "url": "/about",
+      "type": "Main Link",
+      "parent": "-",
+      "order": 1
+    },
+    {
+      "id": "nav-leadership",
+      "label": "Leadership",
+      "url": "/leadership",
+      "type": "Main Link",
+      "parent": "-",
+      "order": 2
+    },
+    {
+      "id": "nav-initiatives",
+      "label": "Initiatives",
+      "url": "/initiatives",
+      "type": "Main Link",
+      "parent": "-",
+      "order": 3
+    },
+    {
+      "id": "nav-events",
+      "label": "Events",
+      "url": "/events",
+      "type": "Main Link",
+      "parent": "-",
+      "order": 4
+    },
+    {
+      "id": "nav-news",
+      "label": "News",
+      "url": "/news",
+      "type": "Main Link",
+      "parent": "-",
+      "order": 5
+    },
+    {
+      "id": "nav-contact",
+      "label": "Contact",
+      "url": "/contact",
+      "type": "Main Link",
+      "parent": "-",
+      "order": 6
+    },
+    {
+      "id": "nav-become-member",
+      "label": "Become a Member",
+      "url": "/membership#join",
+      "type": "Action Button",
+      "parent": "-",
+      "order": 7
+    }
+  ],
+  "newsCategories": [
+    "Chamber News",
+    "Government / Regulatory",
+    "Articles & Insights",
+    "Events"
+  ]
+}

@@ -1,0 +1,9 @@
+export { HeroSection } from "./HeroSection";
+export { HighlightsSection } from "./HighlightsSection";
+export { AboutSection } from "./AboutSection";
+export { ObjectivesSection } from "./ObjectivesSection";
+export { RepresentationSection } from "./RepresentationSection";
+export { InitiativesSection } from "./InitiativesSection";
+export { LeadershipSection } from "./LeadershipSection";
+export { MembershipSection } from "./MembershipSection";
+export { NewsSection } from "./NewsSection";
