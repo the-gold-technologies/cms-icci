@@ -142,10 +142,9 @@ export default function SitemapRobotsPage() {
     );
   }
 
-  const websiteBaseUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://icci.co.in").replace(
-    /\/$/,
-    "",
-  );
+  // The website of this environment (localhost locally, the live site in production), so the
+  // buttons open the files the website actually serves here.
+  const websiteBaseUrl = (process.env.NEXT_PUBLIC_WEBSITE_URL || "").replace(/\/$/, "");
 
   return (
     <div className="flex flex-col gap-8 max-w-6xl mx-auto pb-24 animate-in fade-in duration-500">
