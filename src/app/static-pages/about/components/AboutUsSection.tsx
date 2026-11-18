@@ -14,7 +14,7 @@ const normalize = (d: any = {}) => ({
   badgeLabel: str(d.badgeLabel),
   badgeTitle: str(d.badgeTitle),
   lead: str(d.lead),
-  more: str(d.more),
+  more: Array.isArray(d.more) ? d.more.join("\n\n") : str(d.more),
 });
 
 export function AboutUsSection({ initialData }: { initialData?: any }) {

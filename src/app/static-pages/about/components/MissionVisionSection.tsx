@@ -9,10 +9,10 @@ import { useSectionEditor, str } from "@/lib/useSectionEditor";
 const normalize = (d: any = {}) => ({
   missionTagline: str(d.missionTagline),
   missionLead: str(d.missionLead),
-  missionMore: str(d.missionMore),
+  missionMore: Array.isArray(d.missionMore) ? d.missionMore.join("\n\n") : str(d.missionMore),
   visionTagline: str(d.visionTagline),
   visionLead: str(d.visionLead),
-  visionMore: str(d.visionMore),
+  visionMore: Array.isArray(d.visionMore) ? d.visionMore.join("\n\n") : str(d.visionMore),
 });
 
 type Content = ReturnType<typeof normalize>;
