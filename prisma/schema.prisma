@@ -79,10 +79,12 @@ model NewsItem {
   category  String
   date      String   // e.g. "October 2026"
   img       String
-  imgAlt    String?
-  excerpt   String
-  body      Json     @default("[]") // string[] paragraphs
-  order     Int      @default(0)
+  imgAlt          String?
+  excerpt         String
+  body            Json     @default("[]") // string[] paragraphs
+  metaTitle       String?
+  metaDescription String?
+  order           Int      @default(0)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }

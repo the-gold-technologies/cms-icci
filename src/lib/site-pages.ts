@@ -14,7 +14,7 @@ export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://icci.co.in
 );
 
 export interface SitePage {
-  slug: string; // CMS page slug (Page.slug, /api/<slug>, /static-pages/<slug>)
+  slug: string; // CMS page slug (Page.slug, /api/pages/<slug>, /static-pages/<slug>)
   title: string;
   route: string; // website route
   editorUrl: string;

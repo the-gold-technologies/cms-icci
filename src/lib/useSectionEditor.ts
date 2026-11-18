@@ -42,7 +42,7 @@ export function useSectionEditor<T extends Record<string, unknown>>({
     setLoading(true);
     setSaved(false);
     try {
-      const res = await fetch(`/api/${slug}`, {
+      const res = await fetch(`/api/pages/${slug}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ section, content: normalize(content) }),
@@ -65,13 +65,13 @@ export function useSectionEditor<T extends Record<string, unknown>>({
   return { isOpen, setIsOpen, content, set, loading, saved, handleSave };
 }
 
-/** Fetches `/api/<slug>` once for a page editor. */
+/** Fetches `/api/pages/<slug>` once for a page editor. */
 export function usePageData(slug: string) {
   const [pageData, setPageData] = useState<any>(null);
   useEffect(() => {
     (async () => {
       try {
-        const res = await fetch(`/api/${slug}`);
+        const res = await fetch(`/api/pages/${slug}`);
         const json = await res.json();
         if (json.success && json.data) setPageData(json.data);
         else toast.error(json.error || `Failed to load ${slug} page`);

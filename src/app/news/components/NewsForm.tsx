@@ -32,6 +32,8 @@ export function NewsForm({ initialData, isEdit = false }: NewsFormProps) {
   );
   const [img, setImg] = useState<string>(initialData?.img ?? "");
   const [imgAlt, setImgAlt] = useState<string>(initialData?.imgAlt ?? "");
+  const [metaTitle, setMetaTitle] = useState<string>(initialData?.metaTitle ?? "");
+  const [metaDescription, setMetaDescription] = useState<string>(initialData?.metaDescription ?? "");
 
   useEffect(() => {
     fetch("/api/categories/news")
@@ -64,6 +66,8 @@ export function NewsForm({ initialData, isEdit = false }: NewsFormProps) {
           body,
           img,
           imgAlt,
+          metaTitle,
+          metaDescription,
         }),
       });
       const json = await res.json();
@@ -147,6 +151,24 @@ export function NewsForm({ initialData, isEdit = false }: NewsFormProps) {
         onChange={(e) => setImgAlt(e.target.value)}
         placeholder="e.g. Leave empty when the photo is decorative"
       />
+      <div className="border-t border-gray-100 pt-4 space-y-4">
+        <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wide">SEO Settings</h3>
+        <InputField
+          label="Meta Title"
+          value={metaTitle}
+          onChange={(e) => setMetaTitle(e.target.value)}
+          placeholder="Optional: defaults to article title"
+          helperText="Custom title tag for search engines. Falls back to article title if empty."
+        />
+        <TextAreaField
+          label="Meta Description"
+          value={metaDescription}
+          onChange={(e) => setMetaDescription(e.target.value)}
+          rows={2}
+          placeholder="Optional: defaults to article excerpt"
+          helperText="Custom meta description for search engines. Falls back to article excerpt if empty."
+        />
+      </div>
       <div className="pt-4 border-t border-gray-100 w-full">
         <SaveButton
           type="submit"

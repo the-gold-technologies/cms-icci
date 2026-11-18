@@ -55,6 +55,8 @@ export async function PUT(req: Request, { params }: Params) {
         img,
         imgAlt: body.imgAlt !== undefined ? text(body.imgAlt) : existing.imgAlt,
         body: body.body !== undefined ? paragraphs(body.body) : (existing.body ?? []),
+        metaTitle: body.metaTitle !== undefined ? text(body.metaTitle) || null : existing.metaTitle,
+        metaDescription: body.metaDescription !== undefined ? text(body.metaDescription) || null : existing.metaDescription,
         order: typeof body.order === "number" ? body.order : existing.order,
       },
     });

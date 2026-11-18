@@ -6,34 +6,11 @@ import { DEFAULT_NAV_LINKS } from "@/lib/nav-defaults";
 
 export const dynamic = "force-dynamic";
 
-export async function GET(request: Request) {
+export async function GET() {
   try {
-    const { searchParams } = new URL(request.url);
-    const sync = searchParams.get("sync");
-
-    let links = await prisma.navLink.findMany({
+    const links = await prisma.navLink.findMany({
       orderBy: { order: "asc" },
     });
-
-    // Only restore defaults on an empty table or an explicit sync (never on a normal read)
-    if (links.length === 0 || (sync === "true" && (await checkAdminSession()).authorized)) {
-      await prisma.navLink.deleteMany();
-      for (const item of DEFAULT_NAV_LINKS) {
-        await prisma.navLink.create({
-          data: {
-            id: item.id,
-            label: item.label,
-            url: item.url,
-            type: item.type,
-            parent: item.parent,
-            description: item.description ?? null,
-            image: item.image ?? null,
-            order: item.order,
-          },
-        });
-      }
-      links = await prisma.navLink.findMany({ orderBy: { order: "asc" } });
-    }
 
     return NextResponse.json({ success: true, data: links });
   } catch (error: any) {

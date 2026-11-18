@@ -27,7 +27,7 @@ Next.js 16.1 (App Router, `--webpack`) · React 19 · TypeScript · Tailwind v4 
 - `src/lib/useCollection.ts` — list/delete/reorder for collections.
 - `src/components/` — shared kit: `SectionShell`, `HeadingFields`, `RepeaterField`, `ManagedElsewhereBanner`, `BannerSectionEditor`, `IntroSectionEditor`, `ListSectionEditor`, `EnquiryFormFields` + the LFCS kit (`InputField`, `TextAreaField`, `ImagePickerField`, `CollapsibleCard`, `SaveButton`, `PageHeader`, ...).
 - `src/app/static-pages/<slug>/` — page editor + `components/<Section>.tsx`.
-- `src/app/api/<slug>/route.ts` — `createPageRouteHandlers(slug, title)`.
+- `src/app/api/pages/[slug]/route.ts` — `createPageRouteHandlers(slug, title)`; the single content endpoint for every static page.
 - `scripts/` — `build-seed-from-website.js`, `upload-website-assets.js`, `verify-parity.js`.
 
 ## 5. Security

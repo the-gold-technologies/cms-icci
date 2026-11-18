@@ -13,7 +13,7 @@ CMS_SHARED_SECRET="<same value as icci-cms/.env>"
 
 | Endpoint                                                                                             | Returns                                 | Cache tag     |
 | ---------------------------------------------------------------------------------------------------- | --------------------------------------- | ------------- |
-| `/api/<slug>` (home, about, leadership, initiatives, events, news-and-articles, contact, membership) | `{ [SectionType]: content }` + page SEO | `page:<slug>` |
+| `/api/pages/<slug>` (home, about, leadership, initiatives, events, news-and-articles, contact, membership) | `{ [SectionType]: content }` + page SEO | `page:<slug>` |
 | `/api/leaders`                                                                                       | leaders (office-bearer first, by order) | `leaders`     |
 | `/api/news`, `/api/news/<id>`                                                                        | articles by order                       | `news`        |
 | `/api/events`                                                                                        | events (upcoming first)                 | `events`      |

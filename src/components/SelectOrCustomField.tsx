@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
-import { ChevronDown, Check, PenLine, RotateCcw, Search } from "lucide-react";
+import { ChevronDown, Check, PenLine, RotateCcw, Search, X } from "lucide-react";
 
 export interface OptionItem {
   label: string;
@@ -16,6 +16,8 @@ interface SelectOrCustomFieldProps {
   options: (OptionItem | string)[];
   placeholder?: string;
   allowCustom?: boolean;
+  allowEmpty?: boolean;
+  emptyLabel?: string;
   customPlaceholder?: string;
   helperText?: string;
   required?: boolean;
@@ -28,6 +30,8 @@ export function SelectOrCustomField({
   options,
   placeholder = "Select...",
   allowCustom = true,
+  allowEmpty = true,
+  emptyLabel = "Select...",
   customPlaceholder = "Type custom value...",
   helperText,
   required = false,
@@ -138,9 +142,23 @@ export function SelectOrCustomField({
             }`}
           >
             <span className={selectedOption ? "text-gray-800 font-semibold" : "text-gray-400"}>
-              {selectedOption ? selectedOption.label : placeholder}
+              {selectedOption ? selectedOption.label : (value || placeholder)}
             </span>
             <div className="flex items-center gap-1.5">
+              {allowEmpty && value && (
+                <span
+                  role="button"
+                  tabIndex={0}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onChange("");
+                  }}
+                  className="p-0.5 rounded-full hover:bg-gray-100 text-gray-400 hover:text-gray-600 transition-colors"
+                  title="Clear selection"
+                >
+                  <X className="w-3.5 h-3.5" />
+                </span>
+              )}
               <ChevronDown
                 className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
                   isOpen ? "rotate-180 text-[#ee6a2c]" : ""
@@ -169,6 +187,21 @@ export function SelectOrCustomField({
               )}
 
               <div className="space-y-0.5">
+                {allowEmpty && !searchTerm && (
+                  <button
+                    type="button"
+                    onClick={() => handleSelectOption("")}
+                    className={`w-full text-left px-3 py-2 rounded-xl text-xs flex items-center justify-between transition-colors ${
+                      !value
+                        ? "bg-orange-50/80 text-[#ee6a2c] font-semibold"
+                        : "text-gray-400 hover:bg-gray-50 hover:text-gray-700"
+                    }`}
+                  >
+                    <span className="italic">{emptyLabel || placeholder || "Select..."}</span>
+                    {!value && <Check className="w-3.5 h-3.5 text-[#ee6a2c] shrink-0" />}
+                  </button>
+                )}
+
                 {filteredOptions.length === 0 ? (
                   <div className="px-3 py-2 text-xs text-gray-400 italic">No options found</div>
                 ) : (

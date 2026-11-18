@@ -53,6 +53,8 @@ export async function POST(req: Request) {
         img,
         imgAlt: text(body.imgAlt),
         body: paragraphs(body.body),
+        metaTitle: body.metaTitle !== undefined ? text(body.metaTitle) || null : null,
+        metaDescription: body.metaDescription !== undefined ? text(body.metaDescription) || null : null,
         order: (highest._max.order ?? -1) + 1,
       },
     });
