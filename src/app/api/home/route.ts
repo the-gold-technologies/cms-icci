@@ -1,4 +1,0 @@
-import { createPageRouteHandlers } from "@/lib/page-route-factory";
-
-const { GET, PUT } = createPageRouteHandlers("home", "Home");
-export { GET, PUT };
