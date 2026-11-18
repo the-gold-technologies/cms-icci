@@ -81,16 +81,12 @@ const CMS_INBOX_PATHS: Record<string, string> = {
 const BRAND = "#ee6a2c";
 const BRAND_DARK = "#d4561b";
 const GOLD = "#dfae19";
+const GREEN = "#138808";
+const SLATE_DARK = "#0f172a";
 const FONT = "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
 
 function formTypeLabel(formType: string) {
   return FORM_TYPE_LABELS[formType] || "Website Enquiry";
-}
-
-function button(href: string, label: string, primary: boolean) {
-  const bg = primary ? BRAND : "#ffffff";
-  const color = primary ? "#ffffff" : BRAND;
-  return `<a href="${escapeHtml(href)}" style="display:inline-block;margin:4px 8px 4px 0;padding:11px 20px;background:${bg};color:${color};border:1px solid ${BRAND};border-radius:8px;font-family:${FONT};font-size:14px;font-weight:600;text-decoration:none;">${label}</a>`;
 }
 
 function renderNotification(fields: SubmissionFields) {
@@ -105,6 +101,15 @@ function renderNotification(fields: SubmissionFields) {
     timeStyle: "short",
   });
 
+  const initials =
+    (name || "IC")
+      .trim()
+      .split(/\s+/)
+      .filter(Boolean)
+      .slice(0, 2)
+      .map((w) => w[0]?.toUpperCase())
+      .join("") || "IC";
+
   const cmsBase = (process.env.NEXTAUTH_URL || "").replace(/\/$/, "");
   const inboxUrl = cmsBase ? `${cmsBase}${CMS_INBOX_PATHS[formType] || "/submissions"}` : "";
   const details = DETAIL_FIELDS.filter(({ key }) => fields[key]);
@@ -114,19 +119,16 @@ function renderNotification(fields: SubmissionFields) {
     .map(
       ({ key, label }, i) => `
         <tr>
-          <td style="padding:12px 16px;width:40%;vertical-align:top;font-size:13px;color:#6b6b6b;${i ? "border-top:1px solid #fbe6dc;" : ""}">${label}</td>
-          <td style="padding:12px 16px;vertical-align:top;font-size:14px;color:#1f1f1f;font-weight:600;${i ? "border-top:1px solid #fbe6dc;" : ""}">${escapeHtml(fields[key]!)}</td>
+          <td style="padding:12px 18px;width:38%;vertical-align:top;font-size:13px;color:#64748b;font-weight:500;background:#fafbfc;${i ? "border-top:1px solid #f1f5f9;" : ""}">${label}</td>
+          <td style="padding:12px 18px;vertical-align:top;font-size:13px;color:#0f172a;font-weight:600;${i ? "border-top:1px solid #f1f5f9;" : ""}">${escapeHtml(fields[key]!)}</td>
         </tr>`,
     )
     .join("");
 
   const sectionHeading = (text: string) =>
-    `<p style="margin:28px 0 10px;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:${BRAND};">${text}</p>`;
+    `<div style="margin:26px 0 10px;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:${BRAND};">${text}</div>`;
 
-  const actions = [
-    email ? button(`mailto:${email}`, "Reply by Email", true) : "",
-    phone ? button(`tel:${phone.replace(/[^\d+]/g, "")}`, "Call " + escapeHtml(phone), false) : "",
-  ].join("");
+  const phoneClean = phone.replace(/[^\d+]/g, "");
 
   const html = `<!doctype html>
 <html lang="en">
@@ -136,58 +138,137 @@ function renderNotification(fields: SubmissionFields) {
 <meta name="color-scheme" content="light" />
 <title>${escapeHtml(title)}</title>
 </head>
-<body style="margin:0;padding:0;background:#fdf3ee;">
+<body style="margin:0;padding:0;background:#f1f5f9;-webkit-font-smoothing:antialiased;">
   <div style="display:none;max-height:0;overflow:hidden;opacity:0;">${escapeHtml(`${title} from ${name}${message ? ` — ${message.slice(0, 90)}` : ""}`)}</div>
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#fdf3ee;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f1f5f9;">
     <tr>
-      <td align="center" style="padding:32px 12px;">
-        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width:600px;font-family:${FONT};">
+      <td align="center" style="padding:36px 12px;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width:600px;font-family:${FONT};background:#ffffff;border-radius:16px;overflow:hidden;border:1px solid #e2e8f0;box-shadow:0 4px 20px -2px rgba(15,23,42,0.08);">
+          <!-- Tricolour Accent Line -->
           <tr>
-            <td style="background:${BRAND_DARK};border-radius:14px 14px 0 0;padding:24px 28px;border-bottom:4px solid ${GOLD};">
-              <p style="margin:0;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:${GOLD};font-weight:700;">Indian Chamber of Construction Industry</p>
-              <h1 style="margin:8px 0 0;font-size:22px;line-height:1.3;color:#ffffff;font-weight:700;">New ${escapeHtml(title)}</h1>
-              <p style="margin:6px 0 0;font-size:13px;color:#f9d7c6;">Received ${escapeHtml(receivedAt)} IST via the website</p>
+            <td style="padding:0;line-height:0;font-size:0;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td width="33.33%" height="4" style="background:${BRAND};font-size:1px;line-height:1px;">&nbsp;</td>
+                  <td width="33.34%" height="4" style="background:${GOLD};font-size:1px;line-height:1px;">&nbsp;</td>
+                  <td width="33.33%" height="4" style="background:${GREEN};font-size:1px;line-height:1px;">&nbsp;</td>
+                </tr>
+              </table>
             </td>
           </tr>
+          <!-- Header -->
           <tr>
-            <td style="background:#ffffff;padding:28px;border-radius:0 0 14px 14px;">
-              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#fef8f5;border:1px solid #fbe1d4;border-radius:12px;">
+            <td style="background:${SLATE_DARK};padding:28px 32px 26px 32px;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0">
                 <tr>
-                  <td style="padding:20px;">
-                    <p style="margin:0;font-size:12px;color:#6b6b6b;text-transform:uppercase;letter-spacing:1px;">From</p>
-                    <p style="margin:4px 0 10px;font-size:20px;font-weight:700;color:#1f1f1f;">${escapeHtml(name)}</p>
-                    ${email ? `<p style="margin:0 0 4px;font-size:14px;"><a href="mailto:${escapeHtml(email)}" style="color:${BRAND};text-decoration:none;">&#9993;&nbsp; ${escapeHtml(email)}</a></p>` : ""}
-                    ${phone ? `<p style="margin:0;font-size:14px;"><a href="tel:${escapeHtml(phone.replace(/[^\d+]/g, ""))}" style="color:${BRAND};text-decoration:none;">&#9742;&nbsp; ${escapeHtml(phone)}</a></p>` : ""}
+                  <td style="background:rgba(238,106,44,0.18);border:1px solid rgba(238,106,44,0.35);border-radius:20px;padding:3px 10px;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#fb923c;">
+                    Indian Chamber of Construction Industry
                   </td>
                 </tr>
               </table>
-              ${actions ? `<div style="margin-top:16px;">${actions}</div>` : ""}
+              <h1 style="margin:12px 0 6px;font-size:24px;font-weight:700;color:#ffffff;line-height:1.25;letter-spacing:-0.3px;">New ${escapeHtml(title)}</h1>
+              <p style="margin:0;font-size:13px;color:#94a3b8;line-height:1.4;">
+                <span style="color:#22c55e;font-size:14px;vertical-align:middle;margin-right:4px;">&#9679;</span>Received ${escapeHtml(receivedAt)} IST via website
+              </p>
+            </td>
+          </tr>
+          <!-- Content Body -->
+          <tr>
+            <td style="background:#ffffff;padding:28px 32px 32px 32px;">
+              <!-- Sender Profile Card -->
+              <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px;padding:20px 22px;">
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td width="48" valign="top" style="vertical-align:top;width:48px;">
+                      <div style="width:46px;height:46px;border-radius:50%;background:${BRAND};color:#ffffff;font-size:16px;font-weight:700;line-height:46px;text-align:center;letter-spacing:0.5px;">${initials}</div>
+                    </td>
+                    <td valign="top" style="vertical-align:top;padding-left:16px;">
+                      <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#64748b;">Enquiry From</div>
+                      <div style="font-size:18px;font-weight:700;color:#0f172a;margin:2px 0 6px;letter-spacing:-0.2px;">${escapeHtml(name)}</div>
+                      ${fields.organisation ? `<div style="font-size:13px;color:#475569;margin-bottom:8px;font-weight:500;">&#127970;&nbsp; ${escapeHtml(fields.organisation)}</div>` : ""}
+                      <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                          ${
+                            email
+                              ? `<td style="padding-right:16px;padding-top:2px;">
+                                  <a href="mailto:${escapeHtml(email)}" style="font-size:13px;color:${BRAND};text-decoration:none;font-weight:600;">
+                                    <span style="font-size:14px;">&#9993;</span>&nbsp;${escapeHtml(email)}
+                                  </a>
+                                </td>`
+                              : ""
+                          }
+                          ${
+                            phone
+                              ? `<td style="padding-top:2px;">
+                                  <a href="tel:${escapeHtml(phoneClean)}" style="font-size:13px;color:#475569;text-decoration:none;font-weight:500;">
+                                    <span style="font-size:14px;">&#9742;</span>&nbsp;${escapeHtml(phone)}
+                                  </a>
+                                </td>`
+                              : ""
+                          }
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+
+              <!-- Quick Actions -->
+              ${
+                email || phone
+                  ? `<div style="margin-top:14px;">
+                      ${
+                        email
+                          ? `<a href="mailto:${escapeHtml(email)}" style="display:inline-block;padding:10px 20px;background:${BRAND};color:#ffffff;border-radius:8px;font-size:13px;font-weight:600;text-decoration:none;margin-right:8px;box-shadow:0 1px 2px rgba(238,106,44,0.25);">Reply by Email</a>`
+                          : ""
+                      }
+                      ${
+                        phone
+                          ? `<a href="tel:${escapeHtml(phoneClean)}" style="display:inline-block;padding:9px 18px;background:#ffffff;color:#0f172a;border:1px solid #cbd5e1;border-radius:8px;font-size:13px;font-weight:600;text-decoration:none;">Call ${escapeHtml(phone)}</a>`
+                          : ""
+                      }
+                    </div>`
+                  : ""
+              }
+
+              <!-- Enquiry Details -->
               ${
                 details.length
                   ? `${sectionHeading("Enquiry Details")}
-              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border:1px solid #fbe1d4;border-radius:12px;border-collapse:separate;">${detailRows}
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border:1px solid #e2e8f0;border-radius:12px;overflow:hidden;background:#ffffff;border-collapse:separate;">
+                ${detailRows}
               </table>`
                   : ""
               }
+
+              <!-- Message Block -->
               ${sectionHeading("Message")}
-              <div style="padding:16px 18px;background:#fafafa;border-left:4px solid ${GOLD};border-radius:0 10px 10px 0;font-size:14px;line-height:1.65;color:#2b2b2b;">${
-                message
-                  ? escapeHtml(message).replace(/\r?\n/g, "<br />")
-                  : `<span style="color:#9a9a9a;font-style:italic;">No message was added.</span>`
-              }</div>
+              <div style="padding:18px 20px;background:#f8fafc;border:1px solid #e2e8f0;border-left:4px solid ${BRAND};border-radius:4px 12px 12px 4px;font-size:14px;line-height:1.7;color:#334155;">
+                ${
+                  message
+                    ? escapeHtml(message).replace(/\r?\n/g, "<br />")
+                    : `<span style="color:#94a3b8;font-style:italic;">No message was provided.</span>`
+                }
+              </div>
+
+              <!-- CMS Inbox Link -->
               ${
                 inboxUrl
-                  ? `<div style="margin-top:28px;padding-top:20px;border-top:1px solid #eee;text-align:center;">
-                ${button(inboxUrl, "Open in CMS Inbox", false)}
-              </div>`
+                  ? `<div style="margin-top:28px;padding:18px;background:#f8fafc;border:1px dashed #cbd5e1;border-radius:12px;text-align:center;">
+                      <div style="font-size:12px;color:#64748b;margin-bottom:10px;">This submission is archived and manageable in your CMS dashboard.</div>
+                      <a href="${escapeHtml(inboxUrl)}" style="display:inline-block;padding:9px 20px;background:${SLATE_DARK};color:#ffffff;border-radius:8px;font-size:13px;font-weight:600;text-decoration:none;">Open in CMS Inbox &rarr;</a>
+                    </div>`
                   : ""
               }
             </td>
           </tr>
+        </table>
+        <!-- Automated Notice Footer -->
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width:600px;margin-top:16px;">
           <tr>
-            <td style="padding:18px 12px;text-align:center;font-size:12px;line-height:1.6;color:#8a8a8a;">
-              Replying to this email goes straight to ${escapeHtml(name || "the sender")}.<br />
-              This is an automated alert from the ICCI website.
+            <td style="padding:12px 16px;text-align:center;font-family:${FONT};font-size:12px;line-height:1.6;color:#94a3b8;">
+              Replying to this notification sends directly to <strong style="color:#64748b;">${escapeHtml(name || "the sender")}</strong>${email ? ` (${escapeHtml(email)})` : ""}.<br />
+              Automated notification &bull; <strong>Indian Chamber of Construction Industry</strong>
             </td>
           </tr>
         </table>
@@ -287,7 +368,8 @@ export async function POST(req: Request) {
       after(async () => {
         try {
           await transporter.sendMail({
-            from: process.env.SMTP_FROM || `"ICCI Website" <${process.env.SMTP_USER}>`,
+            // Always the SMTP login address: mail servers reject a From address the account doesn't own
+            from: { name: process.env.SMTP_FROM_NAME || "", address: process.env.SMTP_USER! },
             to: adminEmail,
             replyTo: email,
             subject: `New ${formTypeLabel(formType)} from ${fullName}`,

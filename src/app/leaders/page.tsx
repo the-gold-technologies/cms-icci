@@ -78,7 +78,9 @@ export default function LeadersPage() {
           ];
 
           return allTiers.map((tier) => {
-            const group = items.filter((l) => l.tier === tier.key).sort((a, b) => a.order - b.order);
+            const group = items
+              .filter((l) => l.tier === tier.key)
+              .sort((a, b) => a.order - b.order);
             if (group.length === 0) return null;
             return (
               <section key={tier.key} className="flex flex-col gap-4">
@@ -111,7 +113,9 @@ export default function LeadersPage() {
                           </div>
                         </div>
                         <div className="p-6">
-                          <h3 className="text-base font-bold text-gray-900 leading-snug">{l.name}</h3>
+                          <h3 className="text-base font-bold text-gray-900 leading-snug">
+                            {l.name}
+                          </h3>
                           {l.org && (
                             <p className="text-xs text-gray-500 mt-2 line-clamp-2">{l.org}</p>
                           )}

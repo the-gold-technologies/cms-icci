@@ -11,13 +11,13 @@ CMS_SHARED_SECRET="<same value as icci-cms/.env>"
 
 ## 2. Read API (public GET, JSON `{ success, data, seo }`)
 
-| Endpoint                                                                                             | Returns                                 | Cache tag     |
-| ---------------------------------------------------------------------------------------------------- | --------------------------------------- | ------------- |
+| Endpoint                                                                                                   | Returns                                 | Cache tag     |
+| ---------------------------------------------------------------------------------------------------------- | --------------------------------------- | ------------- |
 | `/api/pages/<slug>` (home, about, leadership, initiatives, events, news-and-articles, contact, membership) | `{ [SectionType]: content }` + page SEO | `page:<slug>` |
-| `/api/leaders`                                                                                       | leaders (office-bearer first, by order) | `leaders`     |
-| `/api/news`, `/api/news/<id>`                                                                        | articles by order                       | `news`        |
-| `/api/events`                                                                                        | events (upcoming first)                 | `events`      |
-| `/api/seo/global`, `/api/nav-links`                                                                  | brand, contact, social, footer, menu    | `site`        |
+| `/api/leaders`                                                                                             | leaders (office-bearer first, by order) | `leaders`     |
+| `/api/news`, `/api/news/<id>`                                                                              | articles by order                       | `news`        |
+| `/api/events`                                                                                              | events (upcoming first)                 | `events`      |
+| `/api/seo/global`, `/api/nav-links`                                                                        | brand, contact, social, footer, menu    | `site`        |
 
 Shared lists are read from their single home: objectives / initiatives / stakeholders from `initiatives`, categories / benefits / membership enquiry from `membership`.
 

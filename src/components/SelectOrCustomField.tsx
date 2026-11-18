@@ -142,7 +142,7 @@ export function SelectOrCustomField({
             }`}
           >
             <span className={selectedOption ? "text-gray-800 font-semibold" : "text-gray-400"}>
-              {selectedOption ? selectedOption.label : (value || placeholder)}
+              {selectedOption ? selectedOption.label : value || placeholder}
             </span>
             <div className="flex items-center gap-1.5">
               {allowEmpty && value && (

@@ -33,7 +33,9 @@ export function NewsForm({ initialData, isEdit = false }: NewsFormProps) {
   const [img, setImg] = useState<string>(initialData?.img ?? "");
   const [imgAlt, setImgAlt] = useState<string>(initialData?.imgAlt ?? "");
   const [metaTitle, setMetaTitle] = useState<string>(initialData?.metaTitle ?? "");
-  const [metaDescription, setMetaDescription] = useState<string>(initialData?.metaDescription ?? "");
+  const [metaDescription, setMetaDescription] = useState<string>(
+    initialData?.metaDescription ?? "",
+  );
 
   useEffect(() => {
     fetch("/api/categories/news")
@@ -152,7 +154,9 @@ export function NewsForm({ initialData, isEdit = false }: NewsFormProps) {
         placeholder="e.g. Leave empty when the photo is decorative"
       />
       <div className="border-t border-gray-100 pt-4 space-y-4">
-        <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wide">SEO Settings</h3>
+        <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wide">
+          SEO Settings
+        </h3>
         <InputField
           label="Meta Title"
           value={metaTitle}
