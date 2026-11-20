@@ -9,8 +9,8 @@ export function NewsBrowserSection({ initialData }: { initialData?: any }) {
     <IntroSectionEditor
       slug="news-and-articles"
       section="NewsBrowserSection"
-      title="2. News Browser (filters, lead story & sidebar)"
-      description="Labels of the category filter, lead story and the 'Have news to share?' card."
+      title="2. News Browser & Community Sidebar"
+      description="Labels for category filters, featured story badges, topic navigation, and the 'Have news to share?' callout card."
       label="News Browser"
       initialData={initialData}
       heading={false}

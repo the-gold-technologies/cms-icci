@@ -51,8 +51,8 @@ export function BannerSectionEditor({
 
   return (
     <SectionShell
-      title={`${number}. Page Banner (photo + H1)`}
-      description={`Top banner of the ${pageName} page: eyebrow, the page's only H1 heading and the background photo.`}
+      title={`${number}. Hero Banner`}
+      description={`Top header banner of the ${pageName} page: eyebrow tagline, primary headline, and background photo.`}
       isOpen={isOpen}
       onToggle={() => setIsOpen(!isOpen)}
       onSave={handleSave}

@@ -9,8 +9,8 @@ export function ObjectivesSection({ initialData }: { initialData?: any }) {
     <IntroSectionEditor
       slug="home"
       section="ObjectivesSection"
-      title="4. Objectives (heading + link)"
-      description="Heading and 'more' link above the numbered objectives grid."
+      title="4. Chamber Objectives Overview"
+      description="Eyebrow tag, heading, and 'Explore all objectives' link. Objective cards are synchronized with Pages › Initiatives."
       label="Objectives"
       initialData={initialData}
       link

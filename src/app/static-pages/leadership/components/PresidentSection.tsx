@@ -9,8 +9,8 @@ export function PresidentSection({ initialData }: { initialData?: any }) {
     <IntroSectionEditor
       slug="leadership"
       section="PresidentSection"
-      title="3. National President (tier heading)"
-      description="Full-width card for the National President."
+      title="3. National President Tier"
+      description="Tier badge, title, and profile button label for the National President section."
       label="National President"
       initialData={initialData}
       managed={[

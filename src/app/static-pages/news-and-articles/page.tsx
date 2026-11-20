@@ -12,7 +12,7 @@ export default function NewsPageEditor() {
     <section className="flex flex-col gap-8 pb-12 max-w-7xl mx-auto">
       <PageHeader
         title="News & Articles Page Sections"
-        description="Manage the 3 live sections of this page, in website order: banner, news browser and the shared article-page labels (articles come from News & Articles)."
+        description="Manage the 3 content sections of the /news page: hero banner, news browser & sidebar, and the article reader template."
         badge="Media"
       />
 

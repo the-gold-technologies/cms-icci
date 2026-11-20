@@ -9,8 +9,8 @@ export function ContactDetailsSection({ initialData }: { initialData?: any }) {
     <IntroSectionEditor
       slug="contact"
       section="ContactDetailsSection"
-      title="2. Contact Details & Map"
-      description="Labels of the address / phone / email blocks and the embedded Google map."
+      title="2. Secretariat Details & Interactive Map"
+      description="Labels for physical office address, phone, official email, and Google Maps location embed."
       label="Contact Details"
       initialData={initialData}
       heading={false}

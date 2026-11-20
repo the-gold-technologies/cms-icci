@@ -19,7 +19,7 @@ export default function LeadershipPageEditor() {
     <section className="flex flex-col gap-8 pb-12 max-w-7xl mx-auto">
       <PageHeader
         title="Leadership Page Sections"
-        description="Manage the 6 live sections of this page, in website order: banner, at-a-glance roster, President, Vice Presidents, Secretaries & Treasurer and the National Executive Committee (people come from the Leadership module)."
+        description="Manage the 6 content sections of the /leadership page: hero banner, at-a-glance roster, National President, Vice Presidents, Secretariat & Treasurer, and National Executive Committee."
         badge="People"
       />
 

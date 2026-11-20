@@ -9,8 +9,8 @@ export function LeadershipSection({ initialData }: { initialData?: any }) {
     <IntroSectionEditor
       slug="home"
       section="LeadershipSection"
-      title="7. National Office Bearers (heading, intro + link)"
-      description="Heading above the office bearer cards."
+      title="7. Leadership Preview (National Office Bearers)"
+      description="Eyebrow tag, heading, intro text, and 'Meet the full leadership' link. Leader cards are managed under Leadership."
       label="Leadership"
       initialData={initialData}
       intro

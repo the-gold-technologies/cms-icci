@@ -8,8 +8,8 @@ export function ArticlePageSection({ initialData }: { initialData?: any }) {
     <IntroSectionEditor
       slug="news-and-articles"
       section="ArticlePageSection"
-      title="3. Article Page (shared labels)"
-      description="Labels used on every /news/[slug] article page."
+      title="3. Article Reading Page Template"
+      description="Labels for the single article reader view (/news/[slug]), including back link and related news header."
       label="Article Page"
       initialData={initialData}
       heading={false}

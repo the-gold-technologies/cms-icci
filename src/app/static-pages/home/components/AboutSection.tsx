@@ -40,8 +40,8 @@ export function AboutSection({ initialData }: { initialData?: any }) {
 
   return (
     <SectionShell
-      title="3. About the Chamber (narrative + 4 cards)"
-      description="Two paragraphs with a bold highlight, beside four small cards."
+      title="3. About the Chamber"
+      description="Eyebrow, heading, narrative with highlighted text, and the four introductory feature cards."
       isOpen={isOpen}
       onToggle={() => setIsOpen(!isOpen)}
       onSave={handleSave}

@@ -40,8 +40,8 @@ export default function HomePageEditor() {
       <div className="bg-white rounded-3xl p-6 shadow-sm ring-1 ring-gray-100">
         <ManagedElsewhereBanner
           icon={UserPlus}
-          title="10. Membership Enquiry (#join) is shared with the Membership page"
-          text="The eligibility note and enquiry form at the bottom of the home page are edited once under Membership."
+          title="10. Membership Application (#join)"
+          text="The eligibility requirements note and application form at the bottom of the home page are synchronized with Pages › Membership."
           href="/static-pages/membership"
           linkLabel="Edit Membership Enquiry"
         />

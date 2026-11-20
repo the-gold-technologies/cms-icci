@@ -12,7 +12,7 @@ export default function EventsPageEditor() {
     <section className="flex flex-col gap-8 pb-12 max-w-7xl mx-auto">
       <PageHeader
         title="Events Page Sections"
-        description="Manage the 3 live sections of this page, in website order: banner, upcoming events and past events (events come from the Events module)."
+        description="Manage the 3 content sections of the /events page: hero banner, upcoming events, and past event archives."
         badge="Calendar"
       />
 

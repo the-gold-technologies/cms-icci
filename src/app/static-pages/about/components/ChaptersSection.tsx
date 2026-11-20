@@ -8,8 +8,8 @@ export function ChaptersSection({ initialData }: { initialData?: any }) {
     <ListSectionEditor
       slug="about"
       section="ChaptersSection"
-      title="6. State Chapters"
-      description="Chapter cards (state, head, contact). The website currently shows placeholder chapters."
+      title="6. Regional & State Chapters"
+      description="Heading, intro text, and state chapter cards (state, head, and contact info)."
       label="State Chapters"
       initialData={initialData}
       fields={[

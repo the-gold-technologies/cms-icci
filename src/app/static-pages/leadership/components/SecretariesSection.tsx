@@ -9,8 +9,8 @@ export function SecretariesSection({ initialData }: { initialData?: any }) {
     <IntroSectionEditor
       slug="leadership"
       section="SecretariesSection"
-      title="5. Secretaries & Treasurer (tier heading)"
-      description="General Secretary, Joint Secretary and Treasurer cards."
+      title="5. Secretariat & Treasurer Tier"
+      description="Tier badge and title for the General Secretary, Joint Secretary, and Treasurer section."
       label="Secretaries & Treasurer"
       initialData={initialData}
       managed={[

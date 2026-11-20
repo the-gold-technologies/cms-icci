@@ -9,8 +9,8 @@ export function VicePresidentsSection({ initialData }: { initialData?: any }) {
     <IntroSectionEditor
       slug="leadership"
       section="VicePresidentsSection"
-      title="4. Vice Presidents (tier heading)"
-      description="Three cards for the National Vice Presidents."
+      title="4. National Vice Presidents Tier"
+      description="Tier badge and title for the National Vice Presidents section."
       label="Vice Presidents"
       initialData={initialData}
       managed={[

@@ -41,8 +41,8 @@ export function MembershipEnquirySection({ initialData }: { initialData?: any })
 
   return (
     <SectionShell
-      title="5. Membership Enquiry (eligibility + form)"
-      description="The #join block shown on both the Membership page and the home page: heading, eligibility note and the enquiry form."
+      title="5. Membership Application & Enquiry Form (#join)"
+      description="Eligibility requirements note, application form headings, input labels, and confirmation message (also shown on Home)."
       isOpen={isOpen}
       onToggle={() => setIsOpen(!isOpen)}
       onSave={handleSave}

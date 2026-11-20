@@ -9,8 +9,8 @@ export function UpcomingEventsSection({ initialData }: { initialData?: any }) {
     <IntroSectionEditor
       slug="events"
       section="UpcomingEventsSection"
-      title="2. Upcoming Events"
-      description="Heading and empty-state message for upcoming events."
+      title="2. Upcoming Events Section"
+      description="Eyebrow tag, heading, and empty-state notice displayed when no upcoming events are scheduled."
       label="Upcoming Events"
       initialData={initialData}
       extra={[

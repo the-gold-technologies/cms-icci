@@ -8,8 +8,8 @@ export function HighlightsSection({ initialData }: { initialData?: any }) {
     <ListSectionEditor
       slug="home"
       section="HighlightsSection"
-      title="2. Highlights Strip (stats under the hero)"
-      description="Four figures on the cream strip under the hero. Icons are fixed by position: people, map, voice, globe."
+      title="2. Key Highlights Strip (Key Statistics)"
+      description="Four key impact figures displayed on the highlight strip directly beneath the hero carousel."
       label="Highlights"
       initialData={initialData}
       heading={false}

@@ -36,8 +36,8 @@ export function AboutUsSection({ initialData }: { initialData?: any }) {
 
   return (
     <SectionShell
-      title="2. About Us (photo, badge & narrative)"
-      description="Photo with the floating badge, the lead paragraph and the paragraphs behind 'Read more'."
+      title="2. About Us Story (Photo, Badge & Narrative)"
+      description="Introductory story on the About page: side photo, establishment badge, lead paragraph, and expandable narrative."
       isOpen={isOpen}
       onToggle={() => setIsOpen(!isOpen)}
       onSave={handleSave}

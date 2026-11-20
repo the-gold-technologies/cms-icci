@@ -9,8 +9,8 @@ export function InitiativesSection({ initialData }: { initialData?: any }) {
     <IntroSectionEditor
       slug="home"
       section="InitiativesSection"
-      title="6. Key Initiatives (heading, intro + link)"
-      description="Cream band introducing the four initiative pillars."
+      title="6. Key Initiatives Overview"
+      description="Eyebrow tag, heading, intro text, and 'View all initiatives' link. Pillar details are synchronized with Pages › Initiatives."
       label="Key Initiatives"
       initialData={initialData}
       intro

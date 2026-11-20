@@ -8,8 +8,8 @@ export function WhoWeRepresentSection({ initialData }: { initialData?: any }) {
     <ListSectionEditor
       slug="initiatives"
       section="WhoWeRepresentSection"
-      title="4. Who We Represent"
-      description="Master stakeholder list — also shown on the home page — plus the 'Become a Member' button."
+      title="4. Industry Representation (Who We Represent)"
+      description="Stakeholder groups represented by the Chamber, intro narrative, and membership call-to-action button (also shown on Home)."
       label="Who We Represent"
       initialData={initialData}
       fields={[

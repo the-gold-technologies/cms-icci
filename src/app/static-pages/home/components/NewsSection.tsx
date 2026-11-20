@@ -9,8 +9,8 @@ export function NewsSection({ initialData }: { initialData?: any }) {
     <IntroSectionEditor
       slug="home"
       section="NewsSection"
-      title="9. Latest News (heading + links)"
-      description="Featured story plus three compact stories (first four articles by order)."
+      title="9. Latest News & Updates"
+      description="Eyebrow tag, heading, and 'View all news' link. Featured stories and recent posts are managed under News & Articles."
       label="News"
       initialData={initialData}
       link

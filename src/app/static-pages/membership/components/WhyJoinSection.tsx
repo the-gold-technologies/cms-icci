@@ -8,8 +8,8 @@ export function WhyJoinSection({ initialData }: { initialData?: any }) {
     <ListSectionEditor
       slug="membership"
       section="WhyJoinSection"
-      title="2. Why Join (benefits)"
-      description="Master benefits list — also shown on the home page."
+      title="2. Why Join (Member Benefits)"
+      description="Section heading, intro narrative, and the full checklist of member benefits (also shown on Home)."
       label="Why Join"
       initialData={initialData}
       fields={[

@@ -9,8 +9,8 @@ export function PastEventsSection({ initialData }: { initialData?: any }) {
     <IntroSectionEditor
       slug="events"
       section="PastEventsSection"
-      title="3. Past Events"
-      description="Heading and empty-state message for past events."
+      title="3. Past Events Section"
+      description="Eyebrow tag, heading, and empty-state notice displayed when no past event reports are published."
       label="Past Events"
       initialData={initialData}
       extra={[

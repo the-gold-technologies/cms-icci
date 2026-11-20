@@ -66,8 +66,8 @@ export function MissionVisionSection({ initialData }: { initialData?: any }) {
 
   return (
     <SectionShell
-      title="4. Mission & Vision (two cards)"
-      description="White mission card and saffron vision card, each with a lead statement and 'Read more' paragraphs."
+      title="4. Mission & Vision Statements"
+      description="Mission card (white) and vision card (saffron), each with an eyebrow tag, lead statement, and expandable paragraphs."
       isOpen={isOpen}
       onToggle={() => setIsOpen(!isOpen)}
       onSave={handleSave}

@@ -70,8 +70,8 @@ export function HeroSection({ initialData }: { initialData?: any }) {
 
   return (
     <SectionShell
-      title="1. Hero Carousel (H1, buttons, slides & side panel)"
-      description="Full-screen photo slider with the H1 headline, two buttons, trust points, the 30+ members card and the sliding 'We represent' card."
+      title="1. Hero Carousel & Overview Panel"
+      description="Main landing hero: primary headline, CTA buttons, background carousel slides, trust badges, and the 'We Represent' quick panel."
       isOpen={isOpen}
       onToggle={() => setIsOpen(!isOpen)}
       onSave={handleSave}

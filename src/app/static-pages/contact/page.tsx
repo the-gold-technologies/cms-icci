@@ -12,7 +12,7 @@ export default function ContactPageEditor() {
     <section className="flex flex-col gap-8 pb-12 max-w-7xl mx-auto">
       <PageHeader
         title="Contact Page Sections"
-        description="Manage the 3 live sections of this page, in website order: banner, contact details & map and the enquiry form."
+        description="Manage the 3 content sections of the /contact page: hero banner, secretariat contact details & map, and the general contact enquiry form."
         badge="Enquiry"
       />
 

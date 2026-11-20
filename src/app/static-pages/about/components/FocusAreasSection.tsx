@@ -8,8 +8,8 @@ export function FocusAreasSection({ initialData }: { initialData?: any }) {
     <ListSectionEditor
       slug="about"
       section="FocusAreasSection"
-      title="3. Focus Areas (What We Work Towards)"
-      description="Four icon cards on the grey band. Icons are fixed by position."
+      title="3. Focus Areas (Strategic Pillars)"
+      description="The four core focus cards on the About page detailing the Chamber's key areas of effort."
       label="Focus Areas"
       initialData={initialData}
       listKey="items"

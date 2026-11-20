@@ -17,7 +17,7 @@ export default function InitiativesPageEditor() {
     <section className="flex flex-col gap-8 pb-12 max-w-7xl mx-auto">
       <PageHeader
         title="Initiatives Page Sections"
-        description="Manage the 4 live sections of this page, in website order: banner, key initiatives, objectives and who we represent (these lists also feed the home page)."
+        description="Manage the 4 content sections of the /initiatives page: hero banner, key initiatives pillars, Chamber objectives, and industry representation (also synchronized with Home)."
         badge="Programmes"
       />
 

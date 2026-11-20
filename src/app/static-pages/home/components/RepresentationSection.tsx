@@ -9,8 +9,8 @@ export function RepresentationSection({ initialData }: { initialData?: any }) {
     <IntroSectionEditor
       slug="home"
       section="RepresentationSection"
-      title="5. Industry Representation (heading + intro)"
-      description="Heading and intro beside the stakeholders list."
+      title="5. Industry Representation"
+      description="Eyebrow tag, heading, and intro summary. Stakeholder categories are synchronized with Pages › Initiatives."
       label="Industry Representation"
       initialData={initialData}
       intro

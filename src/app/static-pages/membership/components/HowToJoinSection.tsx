@@ -8,8 +8,8 @@ export function HowToJoinSection({ initialData }: { initialData?: any }) {
     <ListSectionEditor
       slug="membership"
       section="HowToJoinSection"
-      title="4. How to Join (steps)"
-      description="Numbered steps (1, 2, 3…) in list order."
+      title="4. How to Join (Application Steps)"
+      description="Section heading and sequential steps (1 to 4) detailing the application and onboarding process."
       label="How to Join"
       initialData={initialData}
       listKey="steps"

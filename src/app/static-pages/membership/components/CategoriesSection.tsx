@@ -9,7 +9,7 @@ export function CategoriesSection({ initialData }: { initialData?: any }) {
       slug="membership"
       section="CategoriesSection"
       title="3. Membership Categories"
-      description="Master category list — also used on the home page and as the form's category options."
+      description="Membership tier cards, benefits, and fallback prompt card (also shown on Home)."
       label="Membership Categories"
       initialData={initialData}
       listKey="categories"

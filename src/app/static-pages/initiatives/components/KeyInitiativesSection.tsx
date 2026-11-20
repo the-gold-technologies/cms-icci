@@ -8,8 +8,8 @@ export function KeyInitiativesSection({ initialData }: { initialData?: any }) {
     <ListSectionEditor
       slug="initiatives"
       section="KeyInitiativesSection"
-      title="2. Key Initiatives (four pillars)"
-      description="Master list of initiative cards — also shown on the home page."
+      title="2. Key Initiatives (Four Pillars)"
+      description="The four strategic pillar cards, intro narrative, and section heading (also shown on Home)."
       label="Key Initiatives"
       initialData={initialData}
       fields={[

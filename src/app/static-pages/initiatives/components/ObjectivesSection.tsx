@@ -8,8 +8,8 @@ export function ObjectivesSection({ initialData }: { initialData?: any }) {
     <ListSectionEditor
       slug="initiatives"
       section="ObjectivesSection"
-      title="3. Objectives"
-      description="Master list of numbered objectives — also shown on the home page."
+      title="3. Chamber Objectives"
+      description="The core objectives (01–04) and section heading (also shown on Home)."
       label="Objectives"
       initialData={initialData}
       listKey="items"

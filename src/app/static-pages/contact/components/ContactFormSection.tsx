@@ -31,8 +31,8 @@ export function ContactFormSection({ initialData }: { initialData?: any }) {
 
   return (
     <SectionShell
-      title="3. Enquiry Form (labels & thank-you message)"
-      description="The 'Send us an enquiry' card: field labels, button and the message shown after sending."
+      title="3. General Contact Form"
+      description="Heading, input field labels, submit button text, and confirmation message for website contact enquiries."
       isOpen={isOpen}
       onToggle={() => setIsOpen(!isOpen)}
       onSave={handleSave}

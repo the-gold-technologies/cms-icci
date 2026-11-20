@@ -9,8 +9,8 @@ export function ExecutiveCommitteeSection({ initialData }: { initialData?: any }
     <IntroSectionEditor
       slug="leadership"
       section="ExecutiveCommitteeSection"
-      title="6. Executive Committee (tier heading)"
-      description="Compact cards for the National Executive Committee (5 per row)."
+      title="6. National Executive Committee Tier"
+      description="Tier badge and title for the National Executive Committee member cards."
       label="Executive Committee"
       initialData={initialData}
       managed={[

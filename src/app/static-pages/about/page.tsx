@@ -19,7 +19,7 @@ export default function AboutPageEditor() {
     <section className="flex flex-col gap-8 pb-12 max-w-7xl mx-auto">
       <PageHeader
         title="About Page Sections"
-        description="Manage the 6 live sections of this page, in website order: banner, about us, focus areas, mission & vision, national office bearers and state chapters."
+        description="Manage the 6 content sections of the /about page: hero banner, about us narrative, focus areas, mission & vision statements, leadership overview, and state chapters."
         badge="Institutional"
       />
 

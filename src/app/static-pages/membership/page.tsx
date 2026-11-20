@@ -18,7 +18,7 @@ export default function MembershipPageEditor() {
     <section className="flex flex-col gap-8 pb-12 max-w-7xl mx-auto">
       <PageHeader
         title="Membership Page Sections"
-        description="Manage the 5 live sections of this page, in website order: banner, why join, membership categories, how to join and the membership enquiry form (also shown on the home page)."
+        description="Manage the 5 content sections of the /membership page: hero banner, member benefits, categories, application steps, and the application form (also synchronized with Home)."
         badge="Join"
       />
 

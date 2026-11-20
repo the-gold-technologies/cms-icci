@@ -9,8 +9,8 @@ export function MembershipSection({ initialData }: { initialData?: any }) {
     <IntroSectionEditor
       slug="home"
       section="MembershipSection"
-      title="8. Membership (heading, intro, link + benefits heading)"
-      description="Grey band with membership categories and the benefits list."
+      title="8. Membership Overview & Benefits"
+      description="Eyebrow tag, heading, intro text, categories link, and benefits heading. Categories and benefits are synchronized with Pages › Membership."
       label="Membership"
       initialData={initialData}
       intro
