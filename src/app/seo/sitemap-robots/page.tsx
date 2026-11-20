@@ -148,16 +148,11 @@ export default function SitemapRobotsPage() {
 
   return (
     <div className="flex flex-col gap-8 max-w-6xl mx-auto pb-24 animate-in fade-in duration-500">
-      {/* Header & Save Action */}
-      <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-        <PageHeader
-          title="Sitemap & Robots.txt"
-          description="Configure search engine crawler visibility, robots rules, and dynamic sitemap options."
-        />
-        <div className="mb-2 shrink-0">
-          <SaveButton onClick={handleSave} loading={isSaving} className="w-auto px-10" />
-        </div>
-      </div>
+      {/* Header */}
+      <PageHeader
+        title="Sitemap & Robots.txt"
+        description="Configure search engine crawler visibility, robots rules, and dynamic sitemap options."
+      />
 
       {/* 1. Live SEO Endpoints Card */}
       <div className="bg-white p-6 sm:p-8 rounded-[2rem] shadow-xs border border-gray-100 flex flex-col md:flex-row md:items-center justify-between gap-5">

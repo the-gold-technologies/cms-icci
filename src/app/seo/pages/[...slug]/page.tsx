@@ -164,15 +164,10 @@ export default function PageSpecificSEODetail() {
           <ArrowLeft className="w-4 h-4" />
           Back to Pages
         </Link>
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-5">
-          <PageHeader
-            title={`SEO: ${formData.title}`}
-            description={`Manage the search engine visibility and metadata for the /${formData.slug === "home" ? "" : formData.slug} route.`}
-          />
-          <div className="mb-2 shrink-0">
-            <SaveButton onClick={handleSave} loading={isSaving} className="w-auto px-10 shrink-0" />
-          </div>
-        </div>
+        <PageHeader
+          title={`SEO: ${formData.title}`}
+          description={`Manage the search engine visibility and metadata for the /${formData.slug === "home" ? "" : formData.slug} route.`}
+        />
       </div>
 
       <div className="grid grid-cols-1">

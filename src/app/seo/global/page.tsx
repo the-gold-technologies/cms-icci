@@ -149,15 +149,10 @@ export default function GlobalSEOPage() {
 
   return (
     <div className="flex flex-col gap-8 max-w-6xl mx-auto pb-20 animate-in fade-in duration-500">
-      <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-        <PageHeader
-          title="Global SEO & Tracking"
-          description="Manage website-wide meta tags, landing page heading hierarchy, tracking codes, and favicon."
-        />
-        <div className="mb-2 shrink-0">
-          <SaveButton onClick={handleSave} loading={isSaving} className="w-auto px-10" />
-        </div>
-      </div>
+      <PageHeader
+        title="Global SEO & Tracking"
+        description="Manage website-wide meta tags, landing page heading hierarchy, tracking codes, and favicon."
+      />
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Basic Site Info */}
