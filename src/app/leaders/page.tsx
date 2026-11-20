@@ -41,9 +41,9 @@ export default function LeadersPage() {
         actions={
           <Link
             href="/leaders/create"
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#d4561b] text-white rounded-xl text-xs font-bold hover:bg-[#a8410f] transition-all shadow-xs"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-[#ee6a2c] text-white rounded-xl text-sm font-semibold hover:bg-[#d4561b] transition-all shadow-md shadow-[#ee6a2c]/20 hover:shadow-lg active:scale-[0.99] whitespace-nowrap shrink-0"
           >
-            <Plus className="w-4 h-4" />
+            <Plus className="w-4 h-4" strokeWidth={2.5} />
             <span>Add Leader</span>
           </Link>
         }
@@ -56,9 +56,9 @@ export default function LeadersPage() {
           <p className="text-gray-500 text-sm">No leaders added yet.</p>
           <Link
             href="/leaders/create"
-            className="inline-flex items-center gap-2 px-4 py-2 mt-4 bg-[#d4561b] text-white rounded-xl text-xs font-bold"
+            className="inline-flex items-center gap-2 px-6 py-3 mt-4 bg-[#ee6a2c] text-white rounded-xl text-sm font-semibold hover:bg-[#d4561b] transition-all shadow-md shadow-[#ee6a2c]/20 hover:shadow-lg active:scale-[0.99] whitespace-nowrap shrink-0"
           >
-            <Plus className="w-4 h-4" /> Add First Leader
+            <Plus className="w-4 h-4" strokeWidth={2.5} /> Add First Leader
           </Link>
         </div>
       ) : (

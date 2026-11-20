@@ -1,4 +1,5 @@
 import React, { Dispatch, SetStateAction } from "react";
+import Link from "next/link";
 import { Plus, Trash2 } from "lucide-react";
 
 interface PageHeaderProps {
@@ -32,7 +33,7 @@ export function PageHeader({
 }: PageHeaderProps) {
   return (
     <header className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 w-full">
-      <div className="flex flex-col gap-1.5">
+      <div className="flex flex-col gap-1.5 flex-1 min-w-0 pr-2">
         <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 leading-tight flex items-center gap-3">
           {title}
           {badge && (
@@ -48,34 +49,43 @@ export function PageHeader({
         )}
       </div>
 
-      <div className="flex items-center gap-4 flex-wrap">
+      <div className="flex items-center gap-4 shrink-0">
         {deleteAction && (
           <button
             type="button"
             onClick={deleteAction.onDelete}
-            className="inline-flex items-center gap-2 px-6 py-3 border border-red-100 text-red-500 font-semibold rounded-full hover:bg-red-50 transition-all cursor-pointer text-sm"
+            className="inline-flex items-center gap-2 px-6 py-3 border border-red-100 text-red-500 font-semibold rounded-full hover:bg-red-50 transition-all cursor-pointer text-sm whitespace-nowrap shrink-0"
           >
             <Trash2 className="w-4 h-4" />
             {deleteAction.label}
           </button>
         )}
 
-        {action && (
-          <button
-            type="button"
-            onClick={() => {
-              if (action.onClick) {
-                action.onClick();
-              } else {
-                setIsOpen?.(true);
-              }
-            }}
-            className="inline-flex items-center gap-2 w-fit px-6 bg-[#0B0F29] text-white font-semibold py-3 rounded-full hover:bg-black transition-all hover:border-[#ee6a2c] hover:shadow-[0_0_25px_rgba(238,106,44,0.3)] cursor-pointer text-sm"
-          >
-            {action.icon ? action.icon : <Plus className="-ml-0.5 h-4 w-4" strokeWidth={3} />}
-            {action.label}
-          </button>
-        )}
+        {action &&
+          (action.href ? (
+            <Link
+              href={action.href}
+              className="inline-flex items-center gap-2 px-6 py-3 bg-[#ee6a2c] text-white font-semibold rounded-xl hover:bg-[#d4561b] transition-all shadow-md shadow-[#ee6a2c]/20 hover:shadow-lg active:scale-[0.99] cursor-pointer text-sm whitespace-nowrap shrink-0"
+            >
+              {action.icon ? action.icon : <Plus className="h-4 w-4" strokeWidth={2.5} />}
+              {action.label}
+            </Link>
+          ) : (
+            <button
+              type="button"
+              onClick={() => {
+                if (action.onClick) {
+                  action.onClick();
+                } else {
+                  setIsOpen?.(true);
+                }
+              }}
+              className="inline-flex items-center gap-2 px-6 py-3 bg-[#ee6a2c] text-white font-semibold rounded-xl hover:bg-[#d4561b] transition-all shadow-md shadow-[#ee6a2c]/20 hover:shadow-lg active:scale-[0.99] cursor-pointer text-sm whitespace-nowrap shrink-0"
+            >
+              {action.icon ? action.icon : <Plus className="h-4 w-4" strokeWidth={2.5} />}
+              {action.label}
+            </button>
+          ))}
 
         {actions}
         {children}

@@ -51,37 +51,28 @@ export function HeadingFields({
   }
 
   return (
-    <div className="space-y-4">
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <InputField
-          label={taglineLabel}
-          value={value.tagline}
-          onChange={(e) => onChange("tagline", e.target.value)}
-          placeholder={placeholders.tagline || "e.g. Short eyebrow above the heading"}
-        />
-        <InputField
-          label={headlineLabel}
-          value={value.headline}
-          onChange={(e) => onChange("headline", e.target.value)}
-          placeholder={placeholders.headline || "e.g. Words before the highlighted word"}
-          helperText="Text shown before the saffron highlighted word."
-        />
-        <InputField
-          label="Script Accent"
-          value={value.scriptAccent ?? ""}
-          onChange={(e) => onChange("scriptAccent", e.target.value)}
-          placeholder={placeholders.scriptAccent || "e.g. Word shown in saffron"}
-          helperText="Rendered in the saffron brand colour."
-        />
-      </div>
+    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
       <InputField
-        label="Heading Suffix"
-        value={value.headlineSuffix ?? ""}
-        onChange={(e) => onChange("headlineSuffix", e.target.value)}
+        label={taglineLabel}
+        value={value.tagline}
+        onChange={(e) => onChange("tagline", e.target.value)}
+        placeholder={placeholders.tagline || "e.g. Short eyebrow above the heading"}
+      />
+      <InputField
+        label={headlineLabel}
+        value={value.headline}
+        onChange={(e) => onChange("headline", e.target.value)}
+        placeholder={placeholders.headline || "e.g. Words before the highlighted word"}
+        helperText="Text shown before the saffron highlighted word."
+      />
+      <InputField
+        label="Script Accent"
+        value={value.scriptAccent ?? ""}
+        onChange={(e) => onChange("scriptAccent", e.target.value)}
         placeholder={
-          placeholders.headlineSuffix || "e.g. Text after the highlighted word, incl. full stop"
+          placeholders.scriptAccent || "e.g. Word shown in saffron, incl. dot (e.g. ICCI.)"
         }
-        helperText="Text after the highlighted word. Keep the leading space and the closing full stop."
+        helperText="Rendered in the saffron brand colour. Include any closing punctuation."
       />
     </div>
   );

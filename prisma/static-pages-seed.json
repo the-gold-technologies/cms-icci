@@ -262,8 +262,7 @@
     "LeadershipHeroSection": {
       "tagline": "Leadership",
       "headline": "The people building the",
-      "scriptAccent": "Chamber",
-      "headlineSuffix": ".",
+      "scriptAccent": "Chamber.",
       "image": "https://res.cloudinary.com/dpa93copz/image/upload/v1794909765/icci/home/photo-1503387762-592deb58ef4e_1794909765253.webp",
       "imageAlt": ""
     },
@@ -398,8 +397,7 @@
     "EventsHeroSection": {
       "tagline": "Events",
       "headline": "Conferences, meetings and",
-      "scriptAccent": "workshops",
-      "headlineSuffix": ".",
+      "scriptAccent": "workshops.",
       "image": "https://res.cloudinary.com/dpa93copz/image/upload/v1794909766/icci/home/photo-1429497419816-9ca5cfb4571a_1794909766473.webp",
       "imageAlt": ""
     },
@@ -447,8 +445,7 @@
     "ContactHeroSection": {
       "tagline": "Contact Us",
       "headline": "Get in touch with",
-      "scriptAccent": "ICCI",
-      "headlineSuffix": ".",
+      "scriptAccent": "ICCI.",
       "image": "https://res.cloudinary.com/dpa93copz/image/upload/v1794909773/icci/about/photo-1504307651254-35680f356dfd_1794909773257.webp",
       "imageAlt": ""
     },
@@ -493,8 +490,7 @@
     "MembershipHeroSection": {
       "tagline": "Membership",
       "headline": "Join the chamber that represents",
-      "scriptAccent": "your business",
-      "headlineSuffix": ".",
+      "scriptAccent": "your business.",
       "image": "https://res.cloudinary.com/dpa93copz/image/upload/v1794909763/icci/home/photo-1504307651254-35680f356dfd_1794909763254.webp",
       "imageAlt": ""
     },

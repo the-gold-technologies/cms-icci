@@ -30,6 +30,7 @@ export function IntroSectionEditor({
   initialData,
   intro = false,
   link = false,
+  heading = true,
   extra = [],
   managed,
 }: {
@@ -41,11 +42,16 @@ export function IntroSectionEditor({
   initialData?: any;
   intro?: boolean;
   link?: boolean;
+  heading?: boolean;
   extra?: ExtraField[];
   managed?: { icon: LucideIcon; title: string; text: string; href: string; linkLabel: string }[];
 }) {
   const normalize = (d: any = {}) => {
-    const out: Record<string, string> = { tagline: str(d.tagline), headline: str(d.headline) };
+    const out: Record<string, string> = {};
+    if (heading) {
+      out.tagline = str(d.tagline);
+      out.headline = str(d.headline);
+    }
     if (intro) out.intro = str(d.intro);
     if (link) {
       out.linkLabel = str(d.linkLabel);
@@ -85,10 +91,12 @@ export function IntroSectionEditor({
         <ManagedElsewhereBanner key={m.href + m.title} {...m} />
       ))}
 
-      <HeadingFields
-        value={{ tagline: c.tagline, headline: c.headline }}
-        onChange={(k, v) => set(k, v)}
-      />
+      {heading && (
+        <HeadingFields
+          value={{ tagline: c.tagline, headline: c.headline }}
+          onChange={(k, v) => set(k, v)}
+        />
+      )}
 
       {intro && (
         <TextAreaField

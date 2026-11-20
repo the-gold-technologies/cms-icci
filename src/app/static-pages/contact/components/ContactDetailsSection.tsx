@@ -13,6 +13,7 @@ export function ContactDetailsSection({ initialData }: { initialData?: any }) {
       description="Labels of the address / phone / email blocks and the embedded Google map."
       label="Contact Details"
       initialData={initialData}
+      heading={false}
       extra={[
         {
           key: "addressLabel",

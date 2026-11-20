@@ -12,6 +12,7 @@ export function ArticlePageSection({ initialData }: { initialData?: any }) {
       description="Labels used on every /news/[slug] article page."
       label="Article Page"
       initialData={initialData}
+      heading={false}
       extra={[
         { key: "backLabel", label: "Back Link Label", placeholder: "e.g. Link back to all news" },
         { key: "backLink", label: "Back Link URL", placeholder: "e.g. /news" },

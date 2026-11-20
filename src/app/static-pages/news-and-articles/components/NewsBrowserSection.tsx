@@ -13,6 +13,7 @@ export function NewsBrowserSection({ initialData }: { initialData?: any }) {
       description="Labels of the category filter, lead story and the 'Have news to share?' card."
       label="News Browser"
       initialData={initialData}
+      heading={false}
       extra={[
         { key: "allLabel", label: "'All' Filter Label", placeholder: "e.g. First filter chip" },
         {
