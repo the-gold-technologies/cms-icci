@@ -51,29 +51,36 @@ export function HeadingFields({
   }
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+    <div className="space-y-4">
       <InputField
         label={taglineLabel}
         value={value.tagline}
         onChange={(e) => onChange("tagline", e.target.value)}
         placeholder={placeholders.tagline || "e.g. Short eyebrow above the heading"}
       />
-      <InputField
-        label={headlineLabel}
-        value={value.headline}
-        onChange={(e) => onChange("headline", e.target.value)}
-        placeholder={placeholders.headline || "e.g. Words before the highlighted word"}
-        helperText="Text shown before the saffron highlighted word."
-      />
-      <InputField
-        label="Script Accent"
-        value={value.scriptAccent ?? ""}
-        onChange={(e) => onChange("scriptAccent", e.target.value)}
-        placeholder={
-          placeholders.scriptAccent || "e.g. Word shown in saffron, incl. dot (e.g. ICCI.)"
-        }
-        helperText="Rendered in the saffron brand colour. Include any closing punctuation."
-      />
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <InputField
+          label={headlineLabel}
+          value={value.headline}
+          onChange={(e) => onChange("headline", e.target.value)}
+          placeholder={placeholders.headline || "e.g. Words before the highlighted word"}
+          helperText="Text shown before the saffron highlighted word."
+        />
+        <InputField
+          label="Script Accent"
+          value={value.scriptAccent ?? ""}
+          onChange={(e) => onChange("scriptAccent", e.target.value)}
+          placeholder={placeholders.scriptAccent || "e.g. Word shown in saffron"}
+          helperText="Rendered in the saffron brand colour."
+        />
+        <InputField
+          label="Headline Suffix"
+          value={value.headlineSuffix ?? ""}
+          onChange={(e) => onChange("headlineSuffix", e.target.value)}
+          placeholder={placeholders.headlineSuffix || 'e.g. " industry."'}
+          helperText="Text after the saffron word. Start with a space; include closing punctuation."
+        />
+      </div>
     </div>
   );
 }
