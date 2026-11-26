@@ -8,7 +8,7 @@
  */
 
 /** Public domain of the website, used for canonical URLs, sitemap and robots. */
-export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://icci.co.in").replace(
+export const SITE_URL = (process.env.NEXT_PUBLIC_WEBSITE_URL || "https://icci.co.in").replace(
   /\/$/,
   "",
 );

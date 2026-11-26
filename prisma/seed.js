@@ -27,7 +27,7 @@ const pool = new Pool({ connectionString, ssl: isLocal ? false : { rejectUnautho
 const prisma = new PrismaClient({ adapter: new PrismaPg(pool) });
 
 const OVERWRITE = process.env.SEED_OVERWRITE === "1";
-const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://icci.co.in").replace(/\/$/, "");
+const SITE_URL = (process.env.NEXT_PUBLIC_WEBSITE_URL || "https://icci.co.in").replace(/\/$/, "");
 
 const readJson = (name, fallback) => {
   const file = path.join(__dirname, name);

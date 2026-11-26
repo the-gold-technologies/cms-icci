@@ -106,7 +106,7 @@ Open [http://localhost:3001](http://localhost:3001) in your browser to access th
 | `AUTH_SECRET`              | Secret key used by NextAuth to sign session tokens         | Random 32+ character string                          |
 | `NEXTAUTH_URL`             | Canonical URL of the CMS application                       | `http://localhost:3001`                              |
 | `NEXT_PUBLIC_WEBSITE_URL`  | URL of the frontend website for revalidation pings         | `http://localhost:3000`                              |
-| `NEXT_PUBLIC_SITE_URL`     | Public production domain for canonical URLs and sitemaps   | `https://icci.co.in`                                 |
+| `NEXT_PUBLIC_WEBSITE_URL`  | Public production domain for canonical URLs and sitemaps   | `https://icci.co.in`                                 |
 | `CMS_SHARED_SECRET`        | Shared secret header (`x-cms-secret`) for webhook security | Strong random secret string                          |
 | `CLOUDINARY_CLOUD_NAME`    | Cloudinary cloud account name                              | `your-cloud-name`                                    |
 | `CLOUDINARY_API_KEY`       | Cloudinary API key                                         | `your-api-key`                                       |
